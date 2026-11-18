@@ -13,7 +13,7 @@ This folder describes the code, configs and build steps behind entry **`v2x_v35d
 | BEV mAP, IoU 0.5 (R40) | 0.6384 |
 | Realism: CD / MMD / EMD / FPD | 1.1696 / 0.000204 / 0.9755 / 0.4691 |
 
-The trained weights and the submitted `submission.zip` are on Hugging Face: [sadbodhs/urbantwin-sim2real-lidar](https://huggingface.co/sadbodhs/urbantwin-sim2real-lidar), folder `v2x/`.
+The trained weights and the submitted `submission.zip` are on Hugging Face: [Sadbodh/urbantwin-sim2real-lidar](https://huggingface.co/Sadbodh/urbantwin-sim2real-lidar), folder `v2x/`.
 
 The code is shared by both tracks and lives at the repository root ([top README](../README.md)); run every command below from the repository root.
 

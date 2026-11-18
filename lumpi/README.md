@@ -13,7 +13,7 @@ This folder describes the code, configs and build steps behind entry **`lumpi_v6
 | BEV mAP, IoU 0.5 (R40) | 0.1988 |
 | Realism: CD / MMD / EMD / FPD | 1.5639 / 0.000023 / 1.1773 / 0.1770 |
 
-The trained weights and the submitted `submission.zip` are on Hugging Face: [sadbodhs/urbantwin-sim2real-lidar](https://huggingface.co/sadbodhs/urbantwin-sim2real-lidar), folder `lumpi/`.
+The trained weights and the submitted `submission.zip` are on Hugging Face: [Sadbodh/urbantwin-sim2real-lidar](https://huggingface.co/Sadbodh/urbantwin-sim2real-lidar), folder `lumpi/`.
 
 The code is shared by both tracks and lives at the repository root ([top README](../README.md)); run every command below from the repository root.
 

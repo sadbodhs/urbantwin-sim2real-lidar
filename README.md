@@ -17,7 +17,7 @@ This repository holds the code, configs and build steps behind our ranked entrie
 Scores are from the final leaderboards (Codabench competitions [16684](https://www.codabench.org/competitions/16684/) and [16685](https://www.codabench.org/competitions/16685/)). The method is described in our paper for the IEEE BigData 2026 Big Data Cup.
 
 ## Weights and submissions
-The trained weights and the submitted files are on Hugging Face: [sadbodhs/urbantwin-sim2real-lidar](https://huggingface.co/sadbodhs/urbantwin-sim2real-lidar). It has one folder per track, `lumpi/` and `v2x/`, each holding:
+The trained weights and the submitted files are on Hugging Face: [Sadbodh/urbantwin-sim2real-lidar](https://huggingface.co/Sadbodh/urbantwin-sim2real-lidar). It has one folder per track, `lumpi/` and `v2x/`, each holding:
 - `checkpoints/<model>/`: the checkpoint, its config and its train log;
 - `submission/submission.zip`: the file we uploaded;
 - `submission/anchors/`: earlier uploads' `predictions.json`, which the builders take as fixed inputs;
