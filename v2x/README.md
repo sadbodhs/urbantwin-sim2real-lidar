@@ -1,9 +1,9 @@
-# UrbanTwin Sim2Real LiDAR Challenge, V2X-Real track: joint 3rd place
+# UrbanTwin Sim2Real LiDAR Challenge, V2X-Real track: 3rd place
 
 This folder describes the code, configs and build steps behind entry **`v2x_v35d`** (team **sadbodh**, Sadbodh Sharma) in the
 [UCF UrbanTwin Sim2Real LiDAR Challenge](https://urbanity-lab.github.io/bdc2026-urbantwin-sim2real/) at the IEEE BigData Cup 2026, V2X-Real track.
 - Every detector and second stage was trained only on the **UT-V2X-Real-IC** synthetic digital twin.
-- The organisers ranked the entry **joint 3rd of 46 teams**.
+- The organisers ranked the entry **3rd of 46 teams**.
 
 | Final-phase leaderboard, submission 1054261 | |
 |---|---|

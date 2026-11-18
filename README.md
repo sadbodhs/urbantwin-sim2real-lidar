@@ -53,6 +53,7 @@ The challenge data is not redistributed here. Each track README links the offici
 | `rescorer/` | training and apply code of the LUMPI Person rescorer |
 | `configs/pcdet/` | the model configs (15 LUMPI, 13 V2X-Real) |
 | `configs/starter_kit_mirror/` | where the official kit's frame lists go (not redistributed) |
+| `configs/lumpi_rig.json` | the LUMPI sensor rig for ray-casting walkers and riders, derived from LUMPI (see `configs/README.md`) |
 | `docker/`, `Dockerfile` | GPU images (OpenPCDet 233f849, PyTorch 2.4.1, CUDA 12.1) and the CPU image |
 | `logs/` | build records the builders read: readings, md5 lists and build logs |
 | `tools/` | `verify_submission.py`, `compare_predictions.py` and `rebuild_v2x_test.py` |
@@ -63,13 +64,13 @@ Compute: models were trained on an RTX 3090 and on A100 GPUs; builds and reading
 - **Our code:** Apache License 2.0 (`LICENSE`, `NOTICE`).
 - **Third-party code:** the files in `utl/ext3p/` keep their own Apache-2.0 licences. OpenPCDet, installed by the Dockerfile, is also Apache-2.0.
 - **Weights:** the trained weights on Hugging Face are released under CC BY-NC 4.0.
-- **Data:** the challenge datasets are not redistributed. Each keeps its own licence: UT-LUMPI and UT-V2X-Real-IC CC0 1.0, LUMPI CC BY-NC 3.0, V2X-Real under its own terms.
+- **Data:** the challenge datasets are not redistributed. Each keeps its own licence: UT-LUMPI and UT-V2X-Real-IC CC0 1.0, LUMPI CC BY-NC 3.0, V2X-Real under its own terms. `configs/lumpi_rig.json` holds values derived from LUMPI (see `NOTICE`).
 
 ## Citation
 If you use this code, please cite the challenge's papers and datasets:
 ```bibtex
 @article{shahbaz2026high,
-  title={High-fidelity digital twins for bridging the sim2real gap in lidar-based its perception},
+  title={High-fidelity digital twins for bridging the sim2real gap in {LiDAR}-based {ITS} perception},
   author={Shahbaz, Muhammad and Agarwal, Shaurya},
   journal={IEEE Transactions on Intelligent Transportation Systems},
   volume={27},

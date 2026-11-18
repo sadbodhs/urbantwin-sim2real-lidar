@@ -6,3 +6,8 @@ This product includes software from the following projects, each under the Apach
   FSHNet         https://github.com/Say2L/FSHNet            (utl/ext3p/fshnet, commit 8e8f23e)
   HEDNet/SAFDNet https://github.com/zhanggang001/HEDNet     (utl/ext3p/safdnet, commit 8694e7f)
   Voxel-Mamba    https://github.com/gwenzhang/Voxel-Mamba   (utl/ext3p/voxel_mamba, commit ad8172a)
+
+configs/lumpi_rig.json holds values derived from the LUMPI dataset (Institute of Cartography and Geoinformatics,
+Leibniz University Hannover), which is licensed CC BY-NC 3.0: the beam tables from LUMPI's public sensor metadata,
+and the five sensor positions solved from the per-point range values of one real frame (Measurement 4, frame 0).
+See configs/README.md.

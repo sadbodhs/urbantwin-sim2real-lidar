@@ -245,7 +245,7 @@ python tools/compare_predictions.py --ref sub/predictions.json --new output/lump
 
 ## Real-data use
 
-The text below is the "Real-data use" section of the report we sent to the organisers, copied word for word.
+The text below is the "Real-data use" section of the report we sent to the organisers on Nov 15, copied word for word, with item 5 added on Nov 18 (it is also in our paper).
 
 No detector or second stage was trained on real frames or real labels; every model trains on the UT-LUMPI twin. Real data is the public LUMPI Measurement 4 with its labels. No frame in forbidden_frames.txt, and no frame within 20 frames of one, was used for anything except inference on the test frames.
 1. **Evaluation and selection.** Labelled splits score every change against the gate: val (320 frames below frame 6400) and fresh (320 frames). A third split, NT, has 196 labelled frames: "before" (76 frames, 6401–6476) and "inside" (120 frames between 6765 and 8047). The inside frames are not forbidden, and each is at least 21 frames from a forbidden frame, but they lie within the span of the forbidden test frames. Three changes were chosen on the inside segment:
@@ -260,5 +260,7 @@ No detector or second stage was trained on real frames or real labels; every mod
    - the targets of the realism calibration of our 50 synthetic frames.
 
    160 further unlabelled frames scored the calibration setting. Two learned point refiners for the realism frames were trained against the same 160 unlabelled frames and read on the other 160; neither passed, so neither is in the final package.
+
+5. **Sensor rig.** The walkers and riders added to the training twins are ray-cast through the five-sensor LUMPI rig. Its beam tables come from LUMPI's public sensor metadata, and its five sensor positions were solved from the per-point range values of one real frame (Measurement 4, frame 0, far from any forbidden frame); no labels were used.
 
 Validation, model selection, box-size statistics and realism calibration are on the organisers' list of allowed real-data uses. P3, the constants fitted on val labels and the choices made on the NT inside segment are not on that list as such; we list them here so that they can be judged.
