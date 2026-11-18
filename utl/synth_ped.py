@@ -5,7 +5,7 @@ A human is an elliptic cylinder (legs + torso) and a spherical head, or (BODY 'l
 as capped cylinders plus the head, in a walking pose. It is scanned by every LiDAR of a rig (origin, beam elevations,
 azimuth steps) with range noise, and the scene points it occludes from each sensor are removed. Optional: walkers in
 groups (side by side or standing clusters), walkers occluding each other, and placement over the whole detection
-square. Rigs use public specifications only:
+square. Rigs use public specifications and, for LUMPI, one real frame:
   V2X-Real infrastructure: Ouster OS1-64 (64 beams, +-16.6 deg) or OS1-128 (128 beams, +-22.5 deg) at the frame
     origin, 1024 azimuth steps (datasheets);
   LUMPI: the five Measurement-4 sensors of configs/lumpi_rig.json (beam tables and resolutions from LUMPI's
