@@ -1,0 +1,35 @@
+check output/lumpi/ens_x/lumpi_v59_test.json md5 057209a5c39bcea2436ab69ff5783b90 = logs/build_lumpi_v61.json base 057209a5c39bcea2436ab69ff5783b90 (prefix 057209a5): True
+check v59 test file has the 50 test frames: True
+check output/lumpi/ens_x/lumpi_v59_test.json equals submissions/lumpi_v59/submission.zip's predictions.json frame by frame (canonical): True
+check logs/igm60_spec_lumpi_person_rs_near.json holds 'Person: add spec_lumpi_person_rs', read with base_v59 on all six switches at v59: True
+check logs/igm60_spec_lumpi_person_rs_val.json holds 'Person: add spec_lumpi_person_rs', read with base_v59 on all six switches at v59: True
+check logs/igm60_spec_lumpi_person_rs_val.json 'Person: add spec_lumpi_person_rs' is the failed reading shipped by choice (passed False: val +0.00415 < +0.005; inside +0.0143; veto []): True
+check output/lumpi/spec_lumpi_person_rs/s2/v29_test_min01.json md5 978ed7e2aabe2811d1652e274956a95b = the chain's placed md5 ['978ed7e2aabe2811d1652e274956a95b']: True
+P3 Bicycle boxes 537274 down-weighted 82563 (0.154)
+P3 Person boxes 202210 down-weighted 116336 (0.575)
+P3 Bicycle boxes 537274 down-weighted 82563 (0.154)
+P3 Person boxes 202210 down-weighted 116325 (0.575)
+check val Person AP@0.5 0.484138 / base 0.479987 = the reading's 0.484138 / 0.479987 (1e-9): True
+P3 Bicycle boxes 87774 down-weighted 14284 (0.163)
+P3 Person boxes 32320 down-weighted 18089 (0.560)
+check test: Person chain 'v59' + v59's copies equals lumpi_v59's Person box for box: True
+P3 Bicycle boxes 87774 down-weighted 14284 (0.163)
+P3 Person boxes 32320 down-weighted 18098 (0.560)
+check test: the two-wheeler copies are unchanged (682 boxes): True
+Person      v59  33,002 (>=0.3   469)  v62  33,002 (>=0.3   434)  box for box equal: False
+Car         v59  73,816 (>=0.3  1386)  v62  73,816 (>=0.3  1386)  box for box equal: True
+check Car equals v59 box for box: True
+Bicycle     v59  87,774 (>=0.3   474)  v62  87,774 (>=0.3   474)  box for box equal: True
+check Bicycle equals v59 box for box: True
+Motorcycle  v59  51,217 (>=0.3   208)  v62  51,217 (>=0.3   208)  box for box equal: True
+check Motorcycle equals v59 box for box: True
+Bus         v59  19,342 (>=0.3    14)  v62  19,342 (>=0.3    14)  box for box equal: True
+check Bus equals v59 box for box: True
+Truck       v59  63,651 (>=0.3   105)  v62  63,651 (>=0.3   105)  box for box equal: True
+check Truck equals v59 box for box: True
+Van         v59  27,304 (>=0.3    87)  v62  27,304 (>=0.3    87)  box for box equal: True
+check Van equals v59 box for box: True
+Unknown     v59  34,169 (>=0.3   219)  v62  34,169 (>=0.3   219)  box for box equal: True
+check Unknown equals v59 box for box: True
+check Person changed: True
+wrote output/lumpi/ens_x/lumpi_v62_test.json (390,275 boxes, md5 446102cea120e86bc49adcf5cdabc02c) and logs/build_lumpi_v62.json

@@ -1,0 +1,27 @@
+output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_val_i1_ref.json: md5 dcf627c8447c14da2e1178e21661c52c vs logs/q7_dsvt_vmamba_pvn_v2x_j_read.json's record dcf627c8447c14da2e1178e21661c52c: True
+output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_fresh_ref.json: md5 de2352003aeb36daf3357416b4b31ee3 vs logs/q7_dsvt_vmamba_pvn_v2x_j_read.json's record de2352003aeb36daf3357416b4b31ee3: True
+output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_test_ref.json: md5 f0d938fc9bb1ee18395c17fb512365b9 vs logs/q7_dsvt_vmamba_pvn_v2x_j_read.json's record f0d938fc9bb1ee18395c17fb512365b9: True
+v2x_v34: vehicle q7_dsvt_vmamba_pvn, pedestrian pz, truck v31 | anchor output/v2x/ens/v2x_v31_test.json (md5 6a4360ac5b715559f364bbae3edcdb75)
+NOTE other vehicle candidates marked passed: ['dsvt_j']; stacking rule: one joint reading names the value to take
+P3 static map voxels: 16542 vs 16542 | equal: True
+v2x_v34 val_i1 vehicle (q7_dsvt_vmamba_pvn) AP@0.5 all 0.8634 vs reading 0.8634
+v2x_v34 val_i1 vehicle (q7_dsvt_vmamba_pvn) all / h1 / h2 rows: {'all': [0.8634, 0.2758], 'h1': [0.8345, 0.2767], 'h2': [0.9022, 0.2853]} vs {'all': [0.8634, 0.2758], 'h1': [0.8345, 0.2767], 'h2': [0.9022, 0.2853]} | equal: True
+P3 pedestrian boxes 154134 down-weighted 49769 (0.323)
+v2x_v34 val_i1 pedestrian (pz) AP@0.5 all 0.354 vs reading 0.354
+v2x_v34 val_i1 pedestrian (pz) all / h1 / h2 rows: {'all': [0.354, 0.0055], 'h1': [0.3326, 0.0038], 'h2': [0.3809, 0.0064]} vs {'all': [0.354, 0.0055], 'h1': [0.3326, 0.0038], 'h2': [0.3809, 0.0064]} | equal: True
+v2x_v34 val_i1 truck (v31): 0.7804 vs 0.7804 | equal: True
+v2x_v34 fresh vehicle (q7_dsvt_vmamba_pvn) AP@0.5 all 0.7792 vs reading 0.7792
+v2x_v34 fresh vehicle (q7_dsvt_vmamba_pvn) all / h1 / h2 rows: {'all': [0.7792, 0.2953], 'h1': [0.791, 0.3073], 'h2': [0.7731, 0.2871]} vs {'all': [0.7792, 0.2953], 'h1': [0.791, 0.3073], 'h2': [0.7731, 0.2871]} | equal: True
+P3 pedestrian boxes 344945 down-weighted 107241 (0.311)
+v2x_v34 fresh pedestrian (pz) AP@0.5 all 0.3471 vs reading 0.3471
+v2x_v34 fresh pedestrian (pz) all / h1 / h2 rows: {'all': [0.3471, 0.0041], 'h1': [0.3619, 0.0033], 'h2': [0.3383, 0.0046]} vs {'all': [0.3471, 0.0041], 'h1': [0.3619, 0.0033], 'h2': [0.3383, 0.0046]} | equal: True
+v2x_v34 fresh truck (v31): 0.8472 vs 0.8472 | equal: True
+P3 pedestrian boxes 52008 down-weighted 17403 (0.335)
+test truck rebuilt from v31's chain vs v2x_v31 truck: box for box equal: True
+test v2x_v34 vs q7_dsvt_vmamba_pvn build vehicle: box for box equal: True
+test v2x_v34 vs pz build pedestrian: box for box equal: True
+test v2x_v34 vs v2x_v31 truck: box for box equal: True
+boxes v2x_v34 {'vehicle': 116299, 'pedestrian': 52008, 'truck': 12818} 181125 | v31 {'vehicle': 95434, 'pedestrian': 52008, 'truck': 12818} 160260
+confident vehicle (score >= 0.3) v31 381 -> v2x_v34 393
+confident pedestrian (score >= 0.3) v31 1734 -> v2x_v34 1734
+wrote output/v2x/ens/v2x_v34_test.json (md5 55a2071985af722bf8154e7a10b2809c)

@@ -1,0 +1,22 @@
+https://github.com/Say2L/FSHNet commit 8e8f23efd9da06b38474c1365386b497c3fc9937
+files (import lines rewritten to this package, code unchanged):
+pcdet/models/backbones_3d/fshnet_argo2.py
+pcdet/models/dense_heads/sparse_dynamic_head.py
+pcdet/models/model_utils/hednet_utils.py
+pcdet/models/model_utils/slotformer_utils.py
+pcdet/models/model_utils/scatterformer_utils.py
+pcdet/models/model_utils/centernet_utils.py
+pcdet/utils/loss_utils.py
+pcdet/utils/box_utils.py
+
+Compatibility fixes (code compatibility with torch 2.4.1 / spconv 2.3.6 / numpy 1.26 only,
+no setting, config value, loss, target, data, schedule or architecture changed):
+1. box_utils.py line 71, in_hull: numpy 1.24 removed np.bool.
+   original:  flag = np.zeros(p.shape[0], dtype=np.bool)
+   now:       flag = np.zeros(p.shape[0], dtype=bool)
+2. Upstream config/class mismatch (not a torch issue): the shipped Argoverse2 config
+   (tools/cfgs/argoverse_models/fshnet.yaml) names DENSE_HEAD SparseDynamicHead, which takes one DYNAMIC_POS_NUM (it raised
+   TypeError: new_zeros() ... got list), while its DYNAMIC_POS_NUM and CANDIDATE_NUM are per-head lists. The repo's SparseDynamicHead_multi
+   takes per-head lists. Vendored pcdet/models/dense_heads/sparse_dynamic_head_multi.py (same commit, import lines only) and set in
+   configs/pcdet/fshnet_{lumpi,v2x}.yaml only DENSE_HEAD NAME: SparseDynamicHead -> SparseDynamicHead_multi. Every value as shipped and mapped
+   (DYNAMIC_POS_NUM [25, 25, 64, 16, 16] LUMPI / [25, 16, 64] V2X, CANDIDATE_NUM 5 per head).

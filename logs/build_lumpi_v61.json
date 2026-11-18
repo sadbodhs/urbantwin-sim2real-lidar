@@ -1,0 +1,143 @@
+{
+ "name": "lumpi_v61",
+ "base": {
+  "file": "output/lumpi/ens_x/lumpi_v59_test.json",
+  "md5": "057209a5c39bcea2436ab69ff5783b90"
+ },
+ "change": "Van: add spec_lumpi_van_rs",
+ "reading": {
+  "near": [
+   "logs/igm60_spec_lumpi_van_rs_near.json",
+   "dfe20851f0acd758b89a644a6bde6ee8"
+  ],
+  "val": [
+   "logs/igm60_spec_lumpi_van_rs_val.json",
+   "6cd910bbc4a6fb2e6aff55ffea785987"
+  ]
+ },
+ "val": {
+  "Van": 0.18083108714933424,
+  "Van_base": 0.17080962310005227
+ },
+ "classes": {
+  "Person": {
+   "v59": 33002,
+   "v61": 33002,
+   "equal": true
+  },
+  "Car": {
+   "v59": 73816,
+   "v61": 73816,
+   "equal": true
+  },
+  "Bicycle": {
+   "v59": 87774,
+   "v61": 87774,
+   "equal": true
+  },
+  "Motorcycle": {
+   "v59": 51217,
+   "v61": 51217,
+   "equal": true
+  },
+  "Bus": {
+   "v59": 19342,
+   "v61": 19342,
+   "equal": true
+  },
+  "Truck": {
+   "v59": 63651,
+   "v61": 63651,
+   "equal": true
+  },
+  "Van": {
+   "v59": 27304,
+   "v61": 27916,
+   "equal": false
+  },
+  "Unknown": {
+   "v59": 34169,
+   "v61": 34169,
+   "equal": true
+  }
+ },
+ "boxes": 390887,
+ "out": {
+  "file": "output/lumpi/ens_x/lumpi_v61_test.json",
+  "md5": "88068896370a491204f0cab7d44b3ab4"
+ },
+ "checks": [
+  [
+   "output/lumpi/ens_x/lumpi_v59_test.json md5 057209a5c39bcea2436ab69ff5783b90 = 057209a5c39bcea2436ab69ff5783b90",
+   true
+  ],
+  [
+   "v59 test file has the 50 test frames",
+   true
+  ],
+  [
+   "output/lumpi/ens_x/lumpi_v59_test.json equals submissions/lumpi_v59/submission.zip's predictions.json frame by frame (canonical)",
+   true
+  ],
+  [
+   "logs/igm60_spec_lumpi_van_rs_near.json holds 'Van: add spec_lumpi_van_rs', read on v60's switches with Van / Truck / Car at v59",
+   true
+  ],
+  [
+   "logs/igm60_spec_lumpi_van_rs_val.json holds 'Van: add spec_lumpi_van_rs', read on v60's switches with Van / Truck / Car at v59",
+   true
+  ],
+  [
+   "logs/igm60_spec_lumpi_van_rs_val.json 'Van: add spec_lumpi_van_rs' passed (inside +0.0151, val +0.0100, veto [])",
+   true
+  ],
+  [
+   "igm60's lane for 'Van: add spec_lumpi_van_rs' is IMvVR",
+   true
+  ],
+  [
+   "val: build_lumpi_v6x.lane('Van', spec_lumpi_van_rs) equals igm60's candidate box for box",
+   true
+  ],
+  [
+   "val Van AP@0.5 0.180831 / base 0.170810 = the reading's 0.180831 / 0.170810 (1e-9)",
+   true
+  ],
+  [
+   "test: lane('Van', 'v59') equals lumpi_v59's Van box for box",
+   true
+  ],
+  [
+   "Person equals v59 box for box",
+   true
+  ],
+  [
+   "Car equals v59 box for box",
+   true
+  ],
+  [
+   "Bicycle equals v59 box for box",
+   true
+  ],
+  [
+   "Motorcycle equals v59 box for box",
+   true
+  ],
+  [
+   "Bus equals v59 box for box",
+   true
+  ],
+  [
+   "Truck equals v59 box for box",
+   true
+  ],
+  [
+   "Unknown equals v59 box for box",
+   true
+  ],
+  [
+   "Van changed",
+   true
+  ]
+ ]
+}

@@ -1,0 +1,295 @@
+{
+ "baseline": "v2x_v31",
+ "baseline_md5": "6a4360ac5b715559f364bbae3edcdb75",
+ "experiment": "dsvt_v2x (epoch 20) as one more fusion member (weight 1) in v31's vehicle, pedestrian and truck lanes; v31's second stages rerun on an A100",
+ "gate": "standard V2X gate (val_i1 +0.003 all / h1 / h2, AP@0.7 not down; fresh +0.003 all / h2, AP@0.7 not down), per class, vs v2x_v31",
+ "md5": {
+  "output/v2x/dsvt_v2x_j/s2/pedestrian_neg_fresh_ref.json": "585fef14ee730c86ba7c101bd4b7125a",
+  "output/v2x/dsvt_v2x_j/s2/pedestrian_neg_test_ref.json": "add1048f7eeb424aa1bec15ae102fb19",
+  "output/v2x/dsvt_v2x_j/s2/pedestrian_neg_val_i1_ref.json": "434fe6873db3c9c80a82cde444e48867",
+  "output/v2x/dsvt_v2x_j/s2/pedestrian_x6b_fresh_ref.json": "cfb5abeb942e59cd4129cbdcba00bd1e",
+  "output/v2x/dsvt_v2x_j/s2/pedestrian_x6b_test_ref.json": "6ea33fe5b1db3514c9c53fd601a62714",
+  "output/v2x/dsvt_v2x_j/s2/pedestrian_x6b_val_i1_ref.json": "09d846e4322ea9217e29b99874e7471a",
+  "output/v2x/dsvt_v2x_j/s2/truck_x6b_fresh_ref.json": "0e0fcc68916e3e30e55b37518fea9f08",
+  "output/v2x/dsvt_v2x_j/s2/truck_x6b_test_ref.json": "5af0fa0f13c6b8bf7056f463142ece93",
+  "output/v2x/dsvt_v2x_j/s2/truck_x6b_val_i1_ref.json": "909a4165b166f400cf06295f3f5825c0",
+  "output/v2x/dsvt_v2x_j/s2/vehicle_x6_fresh_ref.json": "aa052d3a65eff209ed79afa036f6692c",
+  "output/v2x/dsvt_v2x_j/s2/vehicle_x6_test_ref.json": "8c73cc7d2b2fea76f0099150ef247e6f",
+  "output/v2x/dsvt_v2x_j/s2/vehicle_x6_val_i1_ref.json": "66e4a636744ba661cba779d4780c2c61"
+ },
+ "vehicle": {
+  "new": {
+   "val_i1": {
+    "all": [
+     0.856,
+     0.2625
+    ],
+    "h1": [
+     0.8308,
+     0.2591
+    ],
+    "h2": [
+     0.8892,
+     0.2799
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.7663,
+     0.2833
+    ],
+    "h1": [
+     0.7832,
+     0.2996
+    ],
+    "h2": [
+     0.7521,
+     0.271
+    ]
+   }
+  },
+  "ref": {
+   "val_i1": {
+    "all": [
+     0.8446,
+     0.2535
+    ],
+    "h1": [
+     0.8191,
+     0.2533
+    ],
+    "h2": [
+     0.8759,
+     0.2645
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.7532,
+     0.2741
+    ],
+    "h1": [
+     0.7696,
+     0.2908
+    ],
+    "h2": [
+     0.7406,
+     0.2631
+    ]
+   }
+  },
+  "val_gate": true,
+  "fresh_gate": true,
+  "passed": true,
+  "files": [
+   "output/v2x/dsvt_v2x_j/s2/vehicle_x6_{s}_ref.json"
+  ]
+ },
+ "pedestrian": {
+  "new": {
+   "val_i1": {
+    "all": [
+     0.3463,
+     0.0041
+    ],
+    "h1": [
+     0.333,
+     0.0018
+    ],
+    "h2": [
+     0.3655,
+     0.0062
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.3377,
+     0.0038
+    ],
+    "h1": [
+     0.3603,
+     0.0025
+    ],
+    "h2": [
+     0.3244,
+     0.0047
+    ]
+   }
+  },
+  "ref": {
+   "val_i1": {
+    "all": [
+     0.3416,
+     0.0042
+    ],
+    "h1": [
+     0.3254,
+     0.002
+    ],
+    "h2": [
+     0.3644,
+     0.0065
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.3321,
+     0.0035
+    ],
+    "h1": [
+     0.3539,
+     0.0023
+    ],
+    "h2": [
+     0.3201,
+     0.0046
+    ]
+   }
+  },
+  "val_gate": false,
+  "fresh_gate": true,
+  "passed": false,
+  "files": [
+   "output/v2x/dsvt_v2x_j/s2/pedestrian_x6b_{s}_ref.json",
+   "output/v2x/dsvt_v2x_j/s2/pedestrian_neg_{s}_ref.json"
+  ]
+ },
+ "truck": {
+  "new": {
+   "val_i1": {
+    "all": [
+     0.7976,
+     0.4019
+    ],
+    "h1": [
+     0.9008,
+     0.1903
+    ],
+    "h2": [
+     0.7546,
+     0.5095
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.8433,
+     0.1974
+    ],
+    "h1": [
+     0.8621,
+     0.0072
+    ],
+    "h2": [
+     0.8297,
+     0.4032
+    ]
+   }
+  },
+  "ref": {
+   "val_i1": {
+    "all": [
+     0.7804,
+     0.4079
+    ],
+    "h1": [
+     0.8903,
+     0.2364
+    ],
+    "h2": [
+     0.7353,
+     0.5106
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.8472,
+     0.2539
+    ],
+    "h1": [
+     0.8654,
+     0.0484
+    ],
+    "h2": [
+     0.8311,
+     0.4596
+    ]
+   }
+  },
+  "val_gate": false,
+  "fresh_gate": false,
+  "passed": false,
+  "files": [
+   "output/v2x/dsvt_v2x_j/s2/truck_x6b_{s}_ref.json"
+  ]
+ },
+ "vehicle_x6_r0_diagnostic": {
+  "new": {
+   "val_i1": {
+    "all": [
+     0.843,
+     0.1276
+    ],
+    "h1": [
+     0.812,
+     0.1066
+    ],
+    "h2": [
+     0.8811,
+     0.1628
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.7348,
+     0.1901
+    ],
+    "h1": [
+     0.747,
+     0.1742
+    ],
+    "h2": [
+     0.7263,
+     0.2112
+    ]
+   }
+  },
+  "ref": {
+   "val_i1": {
+    "all": [
+     0.8296,
+     0.1227
+    ],
+    "h1": [
+     0.807,
+     0.1011
+    ],
+    "h2": [
+     0.8588,
+     0.1549
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.7226,
+     0.1861
+    ],
+    "h1": [
+     0.7313,
+     0.1681
+    ],
+    "h2": [
+     0.7165,
+     0.21
+    ]
+   }
+  },
+  "val_gate": true,
+  "fresh_gate": true,
+  "passed": true,
+  "note": "information only; the vehicle decision is the V-G joint line above"
+ },
+ "passed_classes": [
+  "vehicle"
+ ],
+ "q7_note": "Q7 joint reading only if two or more V2X tries pass the same class"
+}

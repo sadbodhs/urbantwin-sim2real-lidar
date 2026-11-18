@@ -1,0 +1,8 @@
+UrbanTwin Sim2Real LiDAR Challenge entry (team sadbodh)
+Copyright 2026 Sadbodh Sharma
+
+This product includes software from the following projects, each under the Apache License 2.0:
+  OpenPCDet      https://github.com/open-mmlab/OpenPCDet   (installed by the Dockerfile at commit 233f849)
+  FSHNet         https://github.com/Say2L/FSHNet            (utl/ext3p/fshnet, commit 8e8f23e)
+  HEDNet/SAFDNet https://github.com/zhanggang001/HEDNet     (utl/ext3p/safdnet, commit 8694e7f)
+  Voxel-Mamba    https://github.com/gwenzhang/Voxel-Mamba   (utl/ext3p/voxel_mamba, commit ad8172a)

@@ -1,0 +1,5 @@
+https://github.com/gwenzhang/Voxel-Mamba commit ad8172ae963a2067a8c7d938f890bce3b7e46642
+files (import lines rewritten to this package, code unchanged):
+pcdet/models/backbones_3d/voxel_mamba_waymo.py
+pcdet/models/model_utils/voxel_mamba_utils.py
+tools/hilbert_curves/create_hilbert_curve_template.py

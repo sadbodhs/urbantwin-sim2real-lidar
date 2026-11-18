@@ -1,0 +1,224 @@
+# PointPillars, LUMPI track, plan item BR (Bicycle rider retrain): pp_lumpi_m2w.yaml (L8 walker recipe, Bicycle labels
+# grown to at least the Waymo cyclist size 1.78 x 0.84 x 1.78 m, riderless bicycles left unlabelled as negatives) on
+# data/pcdet/ut_lumpi_fix2, whose riders are utl.synth_ped.rider_v2 (scripts/make_ut_lumpi_fix2.sh): legs to the pedals,
+# an upright torso (city / trekking posture, 10-30 deg), arms to the handlebars, the box grown to bike + rider. The old
+# riders were an upright cylinder from the saddle to the neck in the bike-length box; real LUMPI cyclists are about
+# 2.00 x 0.84 x 1.93 m. Rider shape check (scripts/rider_check.py, real val labels for scoring only): top of points
+# 1.61 (old) / 1.69 (v2) vs 1.72 m real, upper-third share 18% / 20% vs 21%. Everything else as pp_lumpi_m2w.yaml.
+CLASS_NAMES: ['Person', 'Car', 'Bicycle', 'Motorcycle', 'Bus', 'Truck', 'Van', 'Unknown']
+
+DATA_CONFIG:
+    DATASET: 'SimDataset'
+    DATA_PATH: '/workspace/data/pcdet/ut_lumpi_fix2'
+    POINT_CLOUD_RANGE: [-40.96, -40.96, -5.0, 40.96, 40.96, 5.0]
+    DATA_SPLIT: {'train': train, 'test': val}
+    INFO_PATH: {'train': [infos_train.pkl], 'test': [infos_val.pkl]}
+
+    POINT_FEATURE_ENCODING: {
+        encoding_type: absolute_coordinates_encoding,
+        used_feature_list: ['x', 'y', 'z'],
+        src_feature_list: ['x', 'y', 'z'],
+    }
+
+    SIM2REAL:
+        PED_INSERT: {PROB: 0.9, N: [5, 25], NAME: 'Person', RIG: 'lumpi',
+                     BODY: 'limbs', GROUP_PROB: 0.4, OCCLUDE: True, AREA_MIX: 0.5}
+        TWO_WHEEL_NEG: {NAMES: ['Bicycle'], MAX_H: 1.45}
+        SIZE_FLOOR: {Bicycle: [1.78, 0.84, 1.78]}
+        STRETCH: {NAME: 'Truck', PROB: 0.6, LEN: [7.5, 16.5], HSCALE: 1.3}   # scene trucks, same EU ranges
+        OBJ_DROP_PROB: 0.3
+        DROP_RANGE: [0.6, 1.0]
+        JITTER_STD: 0.02
+        Z_SHIFT: 0.1
+
+    DATA_AUGMENTOR:
+        DISABLE_AUG_LIST: ['placeholder']
+        AUG_CONFIG_LIST:
+            - NAME: gt_sampling
+              USE_ROAD_PLANE: False
+              DB_INFO_PATH: [dbinfos_train.pkl, dbinfos_train_long.pkl]
+              PREPARE: {filter_by_min_points: ['Car:10', 'Bicycle:10', 'Motorcycle:10', 'Bus:20', 'Truck:20', 'Van:10', 'Unknown:10']}
+              SAMPLE_GROUPS: ['Car:10', 'Bicycle:6', 'Motorcycle:4', 'Bus:2', 'Truck:8', 'Van:4', 'Unknown:2']
+              NUM_POINT_FEATURES: 3
+              DATABASE_WITH_FAKELIDAR: False
+              REMOVE_EXTRA_WIDTH: [0.0, 0.0, 0.0]
+              LIMIT_WHOLE_SCENE: True
+
+            - NAME: random_world_flip
+              ALONG_AXIS_LIST: ['x', 'y']
+
+            - NAME: random_world_rotation
+              WORLD_ROT_ANGLE: [-0.3927, 0.3927]
+
+            - NAME: random_world_scaling
+              WORLD_SCALE_RANGE: [0.95, 1.05]
+
+    DATA_PROCESSOR:
+        - NAME: mask_points_and_boxes_outside_range
+          REMOVE_OUTSIDE_BOXES: True
+
+        - NAME: shuffle_points
+          SHUFFLE_ENABLED: {'train': True, 'test': False}
+
+        - NAME: transform_points_to_voxels
+          VOXEL_SIZE: [0.16, 0.16, 10.0]
+          MAX_POINTS_PER_VOXEL: 32
+          MAX_NUMBER_OF_VOXELS: {'train': 80000, 'test': 100000}
+
+MODEL:
+    NAME: PointPillar
+
+    VFE:
+        NAME: PillarVFE
+        WITH_DISTANCE: False
+        USE_ABSLOTE_XYZ: True
+        USE_NORM: True
+        NUM_FILTERS: [64]
+
+    MAP_TO_BEV:
+        NAME: PointPillarScatter
+        NUM_BEV_FEATURES: 64
+
+    BACKBONE_2D:
+        NAME: BaseBEVBackbone
+        LAYER_NUMS: [3, 5, 5]
+        LAYER_STRIDES: [2, 2, 2]
+        NUM_FILTERS: [64, 128, 256]
+        UPSAMPLE_STRIDES: [1, 2, 4]
+        NUM_UPSAMPLE_FILTERS: [128, 128, 128]
+
+    DENSE_HEAD:
+        NAME: AnchorHeadSingle
+        CLASS_AGNOSTIC: False
+        USE_DIRECTION_CLASSIFIER: True
+        DIR_OFFSET: 0.78539
+        DIR_LIMIT_OFFSET: 0.0
+        NUM_DIR_BINS: 2
+
+        ANCHOR_GENERATOR_CONFIG: [
+            {
+                'class_name': 'Person',
+                'anchor_sizes': [[0.75, 0.75, 1.7]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.5,
+                'unmatched_threshold': 0.35
+            },
+            {
+                'class_name': 'Car',
+                'anchor_sizes': [[4.61, 1.95, 1.72]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.6,
+                'unmatched_threshold': 0.45
+            },
+            {
+                'class_name': 'Bicycle',
+                'anchor_sizes': [[1.78, 0.84, 1.78]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.5,
+                'unmatched_threshold': 0.35
+            },
+            {
+                'class_name': 'Motorcycle',
+                'anchor_sizes': [[2.11, 0.77, 1.72]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.5,
+                'unmatched_threshold': 0.35
+            },
+            {
+                'class_name': 'Bus',
+                'anchor_sizes': [[11.19, 2.94, 3.47]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.55,
+                'unmatched_threshold': 0.4
+            },
+            {
+                'class_name': 'Truck',
+                'anchor_sizes': [[6.74, 2.46, 2.73], [12.5, 2.5, 3.3]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.55,
+                'unmatched_threshold': 0.4
+            },
+            {
+                'class_name': 'Van',
+                'anchor_sizes': [[4.9, 1.9, 1.99]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.6,
+                'unmatched_threshold': 0.45
+            },
+            {
+                'class_name': 'Unknown',
+                'anchor_sizes': [[2.97, 1.54, 1.15]],
+                'anchor_rotations': [0, 1.57],
+                'anchor_bottom_heights': [-2.15],
+                'align_center': False,
+                'feature_map_stride': 2,
+                'matched_threshold': 0.5,
+                'unmatched_threshold': 0.35
+            }
+        ]
+
+        TARGET_ASSIGNER_CONFIG:
+            NAME: AxisAlignedTargetAssigner
+            POS_FRACTION: -1.0
+            SAMPLE_SIZE: 512
+            NORM_BY_NUM_EXAMPLES: False
+            MATCH_HEIGHT: False
+            BOX_CODER: ResidualCoder
+
+        LOSS_CONFIG:
+            LOSS_WEIGHTS: {
+                'cls_weight': 1.0,
+                'loc_weight': 2.0,
+                'dir_weight': 0.2,
+                'code_weights': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+            }
+
+    POST_PROCESSING:
+        RECALL_THRESH_LIST: [0.3, 0.5, 0.7]
+        SCORE_THRESH: 0.05
+        OUTPUT_RAW_SCORE: False
+        EVAL_METRIC: kitti
+        NMS_CONFIG:
+            MULTI_CLASSES_NMS: False
+            NMS_TYPE: nms_gpu
+            NMS_THRESH: 0.01
+            NMS_PRE_MAXSIZE: 4096
+            NMS_POST_MAXSIZE: 300
+
+OPTIMIZATION:
+    BATCH_SIZE_PER_GPU: 4   # LUMPI frames are ~4x denser than V2X; 8 does not fit in 24 GB
+    NUM_EPOCHS: 20
+    OPTIMIZER: adam_onecycle
+    LR: 0.003
+    WEIGHT_DECAY: 0.01
+    MOMENTUM: 0.9
+    MOMS: [0.95, 0.85]
+    PCT_START: 0.4
+    DIV_FACTOR: 10
+    DECAY_STEP_LIST: [35, 45]
+    LR_DECAY: 0.1
+    LR_CLIP: 0.0000001
+    LR_WARMUP: False
+    WARMUP_EPOCH: 1
+    GRAD_NORM_CLIP: 10

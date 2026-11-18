@@ -1,0 +1,9 @@
+7af187cdf3df87efe7da2f08c0ee7c6f  output/v2x/vmamba_v2x_j/s2_in/vehicle_test.json
+6d28d80b02f9ec3563435a8133cf014c  output/v2x/vmamba_v2x_j/s2_in/pedestrian_test.json
+8b10f8b9e26f6c4cadfdf32696eae71d  output/v2x/vmamba_v2x_j/s2_in/truck_test.json
+953e200481be5472edc7920e2eabfeb8  output/v2x/vmamba_v2x_j/s2_in/vehicle_val_i1.json
+4cefed71a33aececc40b8144463f3efd  output/v2x/vmamba_v2x_j/s2_in/pedestrian_val_i1.json
+b7363fb34d6b06e8c9e3ce2ad7dba05e  output/v2x/vmamba_v2x_j/s2_in/truck_val_i1.json
+487353131ed7f24e987e6c0639d23b89  output/v2x/vmamba_v2x_j/s2_in/vehicle_fresh.json
+6f9baf3106fb10a775b7d7e09d4203af  output/v2x/vmamba_v2x_j/s2_in/pedestrian_fresh.json
+1fa3902fdec686c5cc76c2d72edc9395  output/v2x/vmamba_v2x_j/s2_in/truck_fresh.json

@@ -1,0 +1,22 @@
+# urbantwin-lidar:mamba = urbantwin-lidar:latest + torch_scatter 2.1.2 and einops 0.8.0 (as urbantwin-lidar:scatter) + causal-conv1d and the
+# mamba_ssm bundled with Voxel Mamba. Used only by the dsvt_lumpi and vmamba_lumpi jobs
+# (UT_IMAGE=urbantwin-lidar:mamba); every other job keeps urbantwin-lidar:latest.
+# causal-conv1d 1.1.3.post1 (the range Voxel Mamba's mamba 1.1.4 requires, >=1.1.0,<1.2.0) and mamba_ssm 1.1.4 have no official prebuilt wheel for
+# torch 2.4: both are compiled here with the image's nvcc 12.1 (their own setup.py, FORCE_BUILD). mamba_ssm is Voxel Mamba's bundled copy
+# (github.com/gwenzhang/Voxel-Mamba, mamba/): official v1.1.4 except modules/mamba_simple.py (A_log and D wrapped in a submodule, which OpenPCDet's
+# adam_onecycle layer groups need). Build context: ../third_party (Voxel-Mamba and causal-conv1d clones only are copied).
+#   docker build -f docker/Dockerfile.mamba -t urbantwin-lidar:mamba ../third_party
+FROM urbantwin-lidar:latest
+ARG MAX_JOBS=6
+ENV MAX_JOBS=${MAX_JOBS}
+RUN pip install "torch-scatter==2.1.2" -f https://data.pyg.org/whl/torch-2.4.0+cu121.html && pip install "einops==0.8.0"
+# causal-conv1d from its official git tag v1.1.3.post1 (commit 89e4aa4): the PyPI sdist of that version has no csrc/ and cannot compile
+COPY causal-conv1d /opt/causal_conv1d
+RUN cd /opt/causal_conv1d && CAUSAL_CONV1D_FORCE_BUILD=TRUE pip install --no-build-isolation --no-deps .
+COPY Voxel-Mamba/mamba /opt/voxel_mamba_mamba
+RUN cd /opt/voxel_mamba_mamba && MAMBA_FORCE_BUILD=TRUE pip install --no-build-isolation --no-deps .
+# ipdb: imported (not used) by Voxel Mamba's voxel_mamba_utils.py and its template script; version from the repo's requirements.txt
+RUN pip install "ipdb==0.13.13"
+# transformers: a declared dependency of mamba_ssm 1.1.4 (setup.py install_requires; the install above used --no-deps so torch and triton stay as they are);
+# version from Voxel Mamba's requirements.txt
+RUN pip install "transformers==4.41.2"

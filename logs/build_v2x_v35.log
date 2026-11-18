@@ -1,0 +1,26 @@
+check output/v2x/ens/v2x_v34_test.json md5 55a2071985af722bf8154e7a10b2809c = 55a2071985af722bf8154e7a10b2809c: True
+check P3 static map voxels 16542 = 16542: True
+P3 pedestrian boxes 185535 down-weighted 59765 (0.322)
+check val_i1: unshifted dsvt_j pedestrian rows = dsvt_v2x_j_read.json's new rows: True
+P3 pedestrian boxes 154134 down-weighted 49769 (0.323)
+check val_i1: v34's pedestrian (v31 chain + P-Z) rows = v2x_pz_read.json's new rows: True
+P3 pedestrian boxes 185535 down-weighted 59765 (0.322)
+val_i1 pedestrian dsvt_j + P-Z vs v34: all 0.3540 -> 0.3598 (+0.0058; h1 +0.0057, h2 +0.0056; AP@0.7 0.0055 -> 0.0062) | standard-gate conditions missed: none
+P3 pedestrian boxes 414223 down-weighted 128693 (0.311)
+check fresh: unshifted dsvt_j pedestrian rows = dsvt_v2x_j_read.json's new rows: True
+P3 pedestrian boxes 344945 down-weighted 107241 (0.311)
+check fresh: v34's pedestrian (v31 chain + P-Z) rows = v2x_pz_read.json's new rows: True
+P3 pedestrian boxes 414223 down-weighted 128693 (0.311)
+fresh pedestrian dsvt_j + P-Z vs v34: all 0.3471 -> 0.3517 (+0.0046; h1 +0.0051, h2 +0.0048; AP@0.7 0.0041 -> 0.0042) | standard-gate conditions missed: none
+standard gate on this change vs v34 (information; the class is outside the gate by choice): PASS
+P3 pedestrian boxes 52008 down-weighted 17403 (0.335)
+check test: v34's pedestrian rebuilt (v31 chain + P-Z) equals v2x_v34's box for box: True
+P3 pedestrian boxes 62695 down-weighted 20895 (0.333)
+check test frames equal: True
+vehicle    v34 116,299 (>=0.3   393)  v35 116,299 (>=0.3   393)  box for box equal: True
+check vehicle equals v34 box for box: True
+pedestrian v34  52,008 (>=0.3  1734)  v35  62,695 (>=0.3  1736)  box for box equal: False
+truck      v34  12,818 (>=0.3   248)  v35  12,818 (>=0.3   248)  box for box equal: True
+check truck equals v34 box for box: True
+check pedestrian changed: True
+wrote output/v2x/ens/v2x_v35_test.json (191,812 boxes, md5 be6122b96cf619280f260c1e34244d24) and logs/build_v2x_v35.json

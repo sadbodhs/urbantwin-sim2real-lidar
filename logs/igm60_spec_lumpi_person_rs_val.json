@@ -1,0 +1,24 @@
+{
+ "_v60": {
+  "assume_v59": true,
+  "base_v59": true,
+  "switches": {
+   "Person": "v59",
+   "Car": "v59",
+   "Van": "v59",
+   "Truck": "v59",
+   "Bicycle": "v59",
+   "Motorcycle": "v59"
+  }
+ },
+ "Person: add spec_lumpi_person_rs": {
+  "val": 0.4841379233799417,
+  "val_base": 0.4799871116506246,
+  "d_val": 0.004150811729317139,
+  "d_inside": 0.014312948002679404,
+  "d_before": 0.03436620675256369,
+  "veto": [],
+  "passed": false,
+  "val_up_bar": false
+ }
+}

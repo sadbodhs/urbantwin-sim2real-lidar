@@ -1,0 +1,27 @@
+2026-11-15 10:29:06 CST [person_rs chain] waiting for the A100 run (logs/lumpi_person_rs_a.done)
+2026-11-15 14:20:10 CST [person_rs chain] placed output/lumpi/spec_lumpi_person_rs/igm/v29_val_person_min01.json b6b0b0d76f5d0aaaa4ae8a82e683b154
+2026-11-15 14:20:10 CST [person_rs chain] placed output/lumpi/spec_lumpi_person_rs/s2/v29_val_min01.json b6b0b0d76f5d0aaaa4ae8a82e683b154
+2026-11-15 14:20:10 CST [person_rs chain] placed neartest_ws/output/lumpi/spec_lumpi_person_rs/igm/v29_val_person_min01.json f90d353cd5ba02fe89380d283d8983f2
+2026-11-15 14:20:10 CST [person_rs chain] placed output/lumpi/spec_lumpi_person_rs/s2/v29_test_min01.json 978ed7e2aabe2811d1652e274956a95b
+2026-11-15 14:20:12 CST [person_rs chain] s2/v29_val_min01 (information): 50366 refined boxes, 202210 "class": "Person" 
+2026-11-15 14:20:13 CST [person_rs chain] g3/v29_neartest_person_min01 (information): 41919 refined boxes, 174425 "class": "Person" 
+2026-11-15 14:20:13 CST [person_rs chain] inputs in: 4 files, md5 = the list
+2026-11-15 14:20:13 CST [person_rs chain] inputs placed; waiting for logs/person_rs_go (igm_read.py / igm60.py installed)
+2026-11-15 14:20:13 CST [person_rs chain] near60 (neartest_ws; igm_read 56b938f2c1e362e51790b6df7ea62e23, igm60 a9ebb87b41540cd111d22040a094c87e)
+self-check inside Van: v60 (= v59) base 0.053228 vs 0.053228: True
+self-check inside Truck: v60 (= v59) base 0.055678 vs 0.055678: True
+self-check inside Bicycle: v60 (= v59) base 0.210546 (0.2105: True)
+built G3 spec_lumpi_person_rs (Person only, REFINER form: no Car / Van / Truck / Bicycle / Motorcycle candidate)
+Person: v60                                          inside 0.3180 (+0.0000) | before 0.4194 (+0.0000) | AP@0.7 inside 0.0220
+Car: v60                                             inside 0.8473 (+0.0000) | before 0.8171 (+0.0000) | AP@0.7 inside 0.6240
+Van: v60                                             inside 0.0532 (+0.0000) | before 0.3129 (+0.0000) | AP@0.7 inside 0.0009
+Truck: v60                                           inside 0.0557 (+0.0000) | before 0.0003 (+0.0000) | AP@0.7 inside 0.0000
+Bicycle: v60                                         inside 0.2105 (+0.0000) | before 0.4427 (+0.0000) | AP@0.7 inside 0.0393
+Motorcycle: v60                                      inside 0.0249 (+0.0000) | before 0.3967 (+0.0000) | AP@0.7 inside 0.0007
+Person: add spec_lumpi_person_rs                     inside 0.3323 (+0.0143) | before 0.4537 (+0.0344) | AP@0.7 inside 0.0233
+wrote logs/igm60_spec_lumpi_person_rs_near.json
+2026-11-15 14:29:34 CST [person_rs chain] val60 (main)
+gate table for spec_lumpi_person_rs on v60 (inside +0.01 (>= 5 ids), val a - base >= +0.005 unrounded (Motorcycle: also Decision B); veto: touched classes -0.005 on a segment with >= 5 ids (Van and Truck both; Person copies), Person val (copies) not down > 0.01)
+Person: add spec_lumpi_person_rs     inside 0.3323 (+0.0143, 64 ids) | before +0.0344 | val 0.4841 (+0.0042; +0.005 bar missed) | veto none | fail
+wrote logs/igm60_spec_lumpi_person_rs_val.json
+2026-11-15 14:40:53 CST [person_rs chain] done

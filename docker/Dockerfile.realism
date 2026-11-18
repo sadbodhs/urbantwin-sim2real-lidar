@@ -1,0 +1,5 @@
+# CPU-only image for the realism metrics and synthetic-frame calibration (runs on the Mac; no OpenPCDet / CUDA).
+FROM python:3.11-slim
+RUN pip install --no-cache-dir numpy==1.26.4 scipy==1.13.1 POT==0.9.5 shapely==2.0.6
+ENV PYTHONPATH=/workspace OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+WORKDIR /workspace

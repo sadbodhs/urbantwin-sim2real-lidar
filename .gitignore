@@ -1,0 +1,10 @@
+# data, outputs and weights are not part of the repository
+data/
+output/
+submissions/
+.pylib_sk152/
+*.pth
+*.pt
+__pycache__/
+*.pyc
+.DS_Store

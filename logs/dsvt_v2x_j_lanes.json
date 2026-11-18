@@ -1,0 +1,291 @@
+{
+ "experiment": "dsvt_v2x joint lanes: v2x_v31's vehicle (fsh_saf_v2x), pedestrian (fshnet_v2x) and truck (v18) lanes + dsvt_v2x at weight 1",
+ "lanes": "dsvt_v2x_j",
+ "mode": "full",
+ "workers": 6,
+ "splits": [
+  "test",
+  "val_i1",
+  "fresh"
+ ],
+ "script_md5": "845bdf810a573e8d6e9d5bdbaf934ff3",
+ "dsvt_v2x_md5": {
+  "output/v2x/dsvt_v2x/kit/pred_val50k.json": "9473e3902af59b05a14d8155285a86c8",
+  "output/v2x/dsvt_v2x/kit/pred_test.json": "61116c40909029d3de2b11d6c8c67101",
+  "output/v2x/dsvt_v2x/kit/pred_fresh50k.json": "a049ca040cfff198bd8b24768cb7bd0d"
+ },
+ "kit_md5": {
+  "output/v2x/fshnet_v2x/kit/pred_val50k.json": "e7cd475b690b6317918e870c7aab452c",
+  "output/v2x/fshnet_v2x/kit/pred_test.json": "fa728ad136cf0e2897a28f8ee40c4574",
+  "output/v2x/fshnet_v2x/kit/pred_fresh50k.json": "3090ad3b32eee49b1cce8452caa532e8",
+  "output/v2x/safdnet_v2x/kit/pred_val50k.json": "4d28204379b20e0cf5f4adc73d1a919a",
+  "output/v2x/safdnet_v2x/kit/pred_test.json": "06d883937e45590f7c975b2e5b598d43",
+  "output/v2x/safdnet_v2x/kit/pred_fresh50k.json": "269e51c9eb539ae27da59449d14bcc31"
+ },
+ "v31_lane_md5": {
+  "output/v2x/fsh_saf_v2x/s2_in/vehicle_val_i1.json": "bc36abccdbfb978857bdc5e46919be01",
+  "output/v2x/fsh_saf_v2x/s2_in/vehicle_test.json": "c5ad44c6e3d022915f37d5340f222767",
+  "output/v2x/fsh_saf_v2x/s2_in/vehicle_fresh.json": "04d991191cf1dd622e823ddba70b8632",
+  "output/v2x/fshnet_v2x/s2_in/pedestrian_val_i1.json": "8d860619437d76e66fb4e9b220d5d112",
+  "output/v2x/fshnet_v2x/s2_in/pedestrian_test.json": "96320b41d208b68f89f7d2484afeba36",
+  "output/v2x/fshnet_v2x/s2_in/pedestrian_fresh.json": "b5358fe9c8c70280f82de04acb216db6",
+  "output/v2x/ens/v18_val_i1.json": "9035c7aa14068d58a834f8cd85ade6f3",
+  "output/v2x/ens/v18_test.json": "ddaba482383f258752d6b41e4e2bd6e9",
+  "output/v2x/ens/v18_fresh.json": "099b1a4b288b25534db0cb39f488b1c0"
+ },
+ "member_md5": {
+  "output/v2x/sweep_in/pp_test.json": "8d263643437794978b3d1c1271d1120f",
+  "output/v2x/sweep_in/cp_test.json": "10ba1d1b4400612171fc20d82056de36",
+  "output/v2x/sweep_in/ped_test.json": "eb56bcd9c0fceb9b9d11f253149f0fcb",
+  "output/v2x/sweep_in/ppall_test.json": "25645e7ae4b7b5544679eb50b79b0db2",
+  "output/v2x/pp_v2x_walk/kit_mc/pred_test.json": "2bf9a2e5607282d38932736725520ffb",
+  "output/v2x/vrcnn_v2x/kit/pred_test.json": "4187333862c28fdab0662daef1040c17",
+  "output/v2x/vrcnn_v2x_b/kit/pred_test.json": "2c0a6ad41304a21040e98042d0b811d5",
+  "output/v2x/sweep_in/pp_val50k.json": "8e142fe1b37a2684f887e6780f8c810e",
+  "output/v2x/sweep_in/cp_val50k.json": "22c0b6c1d868ca846a4e60be56623f7f",
+  "output/v2x/sweep_in/ped_val50k.json": "4b22668966e41c4f163bd1d873931357",
+  "output/v2x/sweep_in/ppall_val50k.json": "0c0205200564d35917dd09a652d75662",
+  "output/v2x/pp_v2x_walk/kit_mc/pred_val50k.json": "3923637a4e0b8f191720010ce26e971f",
+  "output/v2x/vrcnn_v2x/kit/pred_val50k.json": "6ab177e0d918c79d9862a1138caeba3a",
+  "output/v2x/vrcnn_v2x_b/kit/pred_val50k.json": "0d8427c6803264ba9fca79884916bdf6",
+  "output/v2x/pp_v2x/kit_mc/pred_fresh50k.json": "f6211fcf9a87d0432036190a0d4ccc23",
+  "output/v2x/cp_v2x/kit/pred_fresh50k.json": "f06ef1b410e07d4f19185391d1353549",
+  "output/v2x/pp_v2x_ped/kit_mc/pred_fresh50k.json": "610d92c4ecfbc92795fdb9c24ac71777",
+  "output/v2x/pp_v2x_all/kit_mc/pred_fresh50k.json": "3f4e17e69b9c2705b94dd279be173548",
+  "output/v2x/pp_v2x_walk/kit_mc/pred_fresh50k.json": "d562e0b355096780470042e39f166f55",
+  "output/v2x/vrcnn_v2x/kit/pred_fresh50k.json": "5958468e89f3338eee74656dc703bf97",
+  "output/v2x/vrcnn_v2x_b/kit/pred_fresh50k.json": "bbf5b8a97d7826ccb5513b9c8b1e7c26"
+ },
+ "lane_off": {
+  "vehicle": {
+   "test": {
+    "file": "output/v2x/fsh_saf_v2x/s2_in/vehicle_test.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 95434,
+    "confident": 387
+   },
+   "val_i1": {
+    "file": "output/v2x/fsh_saf_v2x/s2_in/vehicle_val_i1.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 276317,
+    "confident": 1106
+   },
+   "fresh": {
+    "file": "output/v2x/fsh_saf_v2x/s2_in/vehicle_fresh.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 626691,
+    "confident": 2199
+   }
+  },
+  "pedestrian": {
+   "test": {
+    "file": "output/v2x/fshnet_v2x/s2_in/pedestrian_test.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 52008,
+    "confident": 1302
+   },
+   "val_i1": {
+    "file": "output/v2x/fshnet_v2x/s2_in/pedestrian_val_i1.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 154134,
+    "confident": 3299
+   },
+   "fresh": {
+    "file": "output/v2x/fshnet_v2x/s2_in/pedestrian_fresh.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 344945,
+    "confident": 7758
+   }
+  },
+  "truck": {
+   "test": {
+    "file": "output/v2x/ens/v18_test.json",
+    "box_for_box": true,
+    "bytes": null,
+    "in_file_order": true,
+    "frames_tie_order_differs": [],
+    "boxes": 12818,
+    "confident": 215
+   },
+   "val_i1": {
+    "file": "output/v2x/ens/v18_val_i1.json",
+    "box_for_box": true,
+    "bytes": null,
+    "in_file_order": false,
+    "frames_tie_order_differs": [
+     "val_2023-04-04-14-28-53_45_0_i1_000060"
+    ],
+    "boxes": 37557,
+    "confident": 675
+   },
+   "fresh": {
+    "file": "output/v2x/ens/v18_fresh.json",
+    "box_for_box": true,
+    "bytes": null,
+    "in_file_order": true,
+    "frames_tie_order_differs": [],
+    "boxes": 85108,
+    "confident": 1352
+   }
+  }
+ },
+ "new": {
+  "vehicle": {
+   "test": {
+    "md5": "0a2a248bd87af921f3fdfcd741ee19dd",
+    "boxes": 99290,
+    "confident": 386
+   },
+   "val_i1": {
+    "md5": "18ebaa993075c0114e55a9e643bbc826",
+    "boxes": 288082,
+    "confident": 1106
+   },
+   "fresh": {
+    "md5": "226af5025afd720d69f588e05d92bbe4",
+    "boxes": 652351,
+    "confident": 2198
+   }
+  },
+  "pedestrian": {
+   "test": {
+    "md5": "391a0e518bec383ebd5db18603762273",
+    "boxes": 62695,
+    "confident": 1320
+   },
+   "val_i1": {
+    "md5": "1a8ab4abc67d0d4b97d07ebccd94ee57",
+    "boxes": 185535,
+    "confident": 3377
+   },
+   "fresh": {
+    "md5": "c5ae83e9bc875b76e6ef1e694d3a117d",
+    "boxes": 414223,
+    "confident": 7888
+   }
+  },
+  "truck": {
+   "test": {
+    "md5": "367f213ebd3f7a7755ade8bbe8c37134",
+    "boxes": 16755,
+    "confident": 195
+   },
+   "val_i1": {
+    "md5": "51ccf930df9cce5a61074bbfad44c846",
+    "boxes": 49350,
+    "confident": 600
+   },
+   "fresh": {
+    "md5": "3b9894c6590cbc553ccf30d3b4702653",
+    "boxes": 111395,
+    "confident": 1109
+   }
+  }
+ },
+ "time": {
+  "test": {
+   "load_s": 1.0,
+   "chains_s": 275.2,
+   "chunks": 24,
+   "chunk_s_max": 98.3
+  },
+  "val_i1": {
+   "load_s": 6.2,
+   "chains_s": 768.7,
+   "chunks": 24,
+   "chunk_s_max": 213.3
+  },
+  "fresh": {
+   "load_s": 7.0,
+   "chains_s": 1710.5,
+   "chunks": 24,
+   "chunk_s_max": 456.9
+  },
+  "total_s": 2785.7
+ },
+ "members": {
+  "test": {
+   "base5": [
+    "output/v2x/sweep_in/pp_test.json",
+    "output/v2x/sweep_in/cp_test.json",
+    "output/v2x/sweep_in/ped_test.json",
+    "output/v2x/sweep_in/ppall_test.json",
+    "output/v2x/pp_v2x_walk/kit_mc/pred_test.json"
+   ],
+   "x6": [
+    "output/v2x/vrcnn_v2x/kit/pred_test.json"
+   ],
+   "x6b": [
+    "output/v2x/vrcnn_v2x_b/kit/pred_test.json"
+   ],
+   "fsh": [
+    "output/v2x/fshnet_v2x/kit/pred_test.json"
+   ],
+   "saf": [
+    "output/v2x/safdnet_v2x/kit/pred_test.json"
+   ],
+   "dsvt": [
+    "output/v2x/dsvt_v2x/kit/pred_test.json"
+   ]
+  },
+  "val_i1": {
+   "base5": [
+    "output/v2x/sweep_in/pp_val50k.json",
+    "output/v2x/sweep_in/cp_val50k.json",
+    "output/v2x/sweep_in/ped_val50k.json",
+    "output/v2x/sweep_in/ppall_val50k.json",
+    "output/v2x/pp_v2x_walk/kit_mc/pred_val50k.json"
+   ],
+   "x6": [
+    "output/v2x/vrcnn_v2x/kit/pred_val50k.json"
+   ],
+   "x6b": [
+    "output/v2x/vrcnn_v2x_b/kit/pred_val50k.json"
+   ],
+   "fsh": [
+    "output/v2x/fshnet_v2x/kit/pred_val50k.json"
+   ],
+   "saf": [
+    "output/v2x/safdnet_v2x/kit/pred_val50k.json"
+   ],
+   "dsvt": [
+    "output/v2x/dsvt_v2x/kit/pred_val50k.json"
+   ]
+  },
+  "fresh": {
+   "base5": [
+    "output/v2x/pp_v2x/kit_mc/pred_fresh50k.json",
+    "output/v2x/cp_v2x/kit/pred_fresh50k.json",
+    "output/v2x/pp_v2x_ped/kit_mc/pred_fresh50k.json",
+    "output/v2x/pp_v2x_all/kit_mc/pred_fresh50k.json",
+    "output/v2x/pp_v2x_walk/kit_mc/pred_fresh50k.json"
+   ],
+   "x6": [
+    "output/v2x/vrcnn_v2x/kit/pred_fresh50k.json"
+   ],
+   "x6b": [
+    "output/v2x/vrcnn_v2x_b/kit/pred_fresh50k.json"
+   ],
+   "fsh": [
+    "output/v2x/fshnet_v2x/kit/pred_fresh50k.json"
+   ],
+   "saf": [
+    "output/v2x/safdnet_v2x/kit/pred_fresh50k.json"
+   ],
+   "dsvt": [
+    "output/v2x/dsvt_v2x/kit/pred_fresh50k.json"
+   ]
+  }
+ },
+ "lane_off_passed": true,
+ "maxrss_mb": {
+  "main": 3161,
+  "largest_worker": 2141
+ }
+}

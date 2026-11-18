@@ -1,0 +1,81 @@
+{
+ "model": "vrcnn_lumpi_rs",
+ "passed": [
+  "Car",
+  "Bicycle"
+ ],
+ "swapped": {
+  "Car": {
+   "arm": "route lane, rule R0",
+   "source": "route_vrcnn_lumpi_rs_test.json",
+   "val": {
+    "new": {
+     "all": [
+      0.896,
+      0.5095
+     ],
+     "h1": [
+      0.9278,
+      0.4556
+     ],
+     "h2": [
+      0.8634,
+      0.5685
+     ]
+    },
+    "ref_v53_v54": {
+     "all": [
+      0.8858,
+      0.4844
+     ],
+     "h1": [
+      0.9171,
+      0.4275
+     ],
+     "h2": [
+      0.8554,
+      0.5453
+     ]
+    }
+   },
+   "fresh": {
+    "new": {
+     "all": [
+      0.9002,
+      0.5166
+     ],
+     "h1": [
+      0.9323,
+      0.4632
+     ],
+     "h2": [
+      0.8649,
+      0.5712
+     ]
+    },
+    "ref_v53_v54": {
+     "all": [
+      0.8891,
+      0.4878
+     ],
+     "h1": [
+      0.9203,
+      0.4276
+     ],
+     "h2": [
+      0.8567,
+      0.5547
+     ]
+    }
+   }
+  }
+ },
+ "not_swapped": {
+  "Bicycle": "reading made without P3 (v54 has P3 on Person and Bicycle): not on v54's own chain for this class"
+ },
+ "boxes": [
+  382453,
+  389593
+ ],
+ "built": true
+}

@@ -1,0 +1,93 @@
+{
+ "baseline": "v2x_v32",
+ "baseline_md5": "adc281c6c553c2409f0ef2dedc449db0",
+ "experiment": "Q7 joint: v31's vehicle lane + dsvt_v2x + vmamba_v2x + pv_v2x_n (weight 1 each), v32's vehicle chain (X6 R0, X8, V-G frozen steps)",
+ "lanes": "q7_dsvt_vmamba_pvn_v2x_j",
+ "members": [
+  "dsvt_v2x",
+  "vmamba_v2x",
+  "pv_v2x_n"
+ ],
+ "gate": "standard V2X gate (val_i1 +0.003 all / h1 / h2, AP@0.7 not down; fresh +0.003 all / h2, AP@0.7 not down), vehicle, vs v2x_v32",
+ "md5": {
+  "output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_fresh_ref.json": "de2352003aeb36daf3357416b4b31ee3",
+  "output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_test_ref.json": "f0d938fc9bb1ee18395c17fb512365b9",
+  "output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_val_i1_ref.json": "dcf627c8447c14da2e1178e21661c52c",
+  "output/v2x/dsvt_v2x_j/s2/vehicle_x6_fresh_ref.json": "aa052d3a65eff209ed79afa036f6692c",
+  "output/v2x/dsvt_v2x_j/s2/vehicle_x6_test_ref.json": "8c73cc7d2b2fea76f0099150ef247e6f",
+  "output/v2x/dsvt_v2x_j/s2/vehicle_x6_val_i1_ref.json": "66e4a636744ba661cba779d4780c2c61"
+ },
+ "vehicle": {
+  "new": {
+   "val_i1": {
+    "all": [
+     0.8634,
+     0.2758
+    ],
+    "h1": [
+     0.8345,
+     0.2767
+    ],
+    "h2": [
+     0.9022,
+     0.2853
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.7792,
+     0.2953
+    ],
+    "h1": [
+     0.791,
+     0.3073
+    ],
+    "h2": [
+     0.7731,
+     0.2871
+    ]
+   }
+  },
+  "ref": {
+   "val_i1": {
+    "all": [
+     0.856,
+     0.2625
+    ],
+    "h1": [
+     0.8308,
+     0.2591
+    ],
+    "h2": [
+     0.8892,
+     0.2799
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.7663,
+     0.2833
+    ],
+    "h1": [
+     0.7832,
+     0.2996
+    ],
+    "h2": [
+     0.7521,
+     0.271
+    ]
+   }
+  },
+  "val_gate": true,
+  "fresh_gate": true,
+  "passed": true,
+  "files": [
+   "output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_val_i1_ref.json",
+   "output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_test_ref.json",
+   "output/v2x/q7_dsvt_vmamba_pvn_v2x_j/s2/vehicle_x6_fresh_ref.json"
+  ]
+ },
+ "passed_classes": [
+  "vehicle"
+ ]
+}

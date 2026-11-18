@@ -1,0 +1,15 @@
+P3 static map voxels 16542
+P3 pedestrian boxes 154134 down-weighted 49769 (0.323)
+v30 val_i1 vehicle: 0.8296 vs 0.8296 | equal: True
+v30 val_i1 pedestrian: 0.3416 vs 0.3416 | equal: True
+v30 val_i1 truck: 0.7804 vs 0.7804 | equal: True
+P3 pedestrian boxes 344945 down-weighted 107241 (0.311)
+v30 fresh vehicle: 0.7226 vs 0.7226 | equal: True
+v30 fresh pedestrian: 0.3321 vs 0.3321 | equal: True
+v30 fresh truck: 0.8472 vs 0.8472 | equal: True
+test v30 vs v2x_v29 truck: box for box equal: True
+test v30 vs v2x_v29 pedestrian: box for box equal: True
+test v30 vs joint R0 build vehicle: box for box equal: True
+boxes v30 {'vehicle': 95434, 'pedestrian': 52008, 'truck': 12818} 160260 | v29 {'vehicle': 83237, 'pedestrian': 52008, 'truck': 12818} 148063
+confident vehicles (score >= 0.3) v29 388 -> v30 381
+wrote v2x_v30_test.json

@@ -1,0 +1,12 @@
+585fef14ee730c86ba7c101bd4b7125a  output/v2x/dsvt_v2x_j/s2/pedestrian_neg_fresh_ref.json
+add1048f7eeb424aa1bec15ae102fb19  output/v2x/dsvt_v2x_j/s2/pedestrian_neg_test_ref.json
+434fe6873db3c9c80a82cde444e48867  output/v2x/dsvt_v2x_j/s2/pedestrian_neg_val_i1_ref.json
+cfb5abeb942e59cd4129cbdcba00bd1e  output/v2x/dsvt_v2x_j/s2/pedestrian_x6b_fresh_ref.json
+6ea33fe5b1db3514c9c53fd601a62714  output/v2x/dsvt_v2x_j/s2/pedestrian_x6b_test_ref.json
+09d846e4322ea9217e29b99874e7471a  output/v2x/dsvt_v2x_j/s2/pedestrian_x6b_val_i1_ref.json
+0e0fcc68916e3e30e55b37518fea9f08  output/v2x/dsvt_v2x_j/s2/truck_x6b_fresh_ref.json
+5af0fa0f13c6b8bf7056f463142ece93  output/v2x/dsvt_v2x_j/s2/truck_x6b_test_ref.json
+909a4165b166f400cf06295f3f5825c0  output/v2x/dsvt_v2x_j/s2/truck_x6b_val_i1_ref.json
+aa052d3a65eff209ed79afa036f6692c  output/v2x/dsvt_v2x_j/s2/vehicle_x6_fresh_ref.json
+8c73cc7d2b2fea76f0099150ef247e6f  output/v2x/dsvt_v2x_j/s2/vehicle_x6_test_ref.json
+66e4a636744ba661cba779d4780c2c61  output/v2x/dsvt_v2x_j/s2/vehicle_x6_val_i1_ref.json

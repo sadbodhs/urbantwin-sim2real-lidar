@@ -1,0 +1,9 @@
+0a2a248bd87af921f3fdfcd741ee19dd  output/v2x/dsvt_v2x_j/s2_in/vehicle_test.json
+391a0e518bec383ebd5db18603762273  output/v2x/dsvt_v2x_j/s2_in/pedestrian_test.json
+367f213ebd3f7a7755ade8bbe8c37134  output/v2x/dsvt_v2x_j/s2_in/truck_test.json
+18ebaa993075c0114e55a9e643bbc826  output/v2x/dsvt_v2x_j/s2_in/vehicle_val_i1.json
+1a8ab4abc67d0d4b97d07ebccd94ee57  output/v2x/dsvt_v2x_j/s2_in/pedestrian_val_i1.json
+51ccf930df9cce5a61074bbfad44c846  output/v2x/dsvt_v2x_j/s2_in/truck_val_i1.json
+226af5025afd720d69f588e05d92bbe4  output/v2x/dsvt_v2x_j/s2_in/vehicle_fresh.json
+c5ae83e9bc875b76e6ef1e694d3a117d  output/v2x/dsvt_v2x_j/s2_in/pedestrian_fresh.json
+3b9894c6590cbc553ccf30d3b4702653  output/v2x/dsvt_v2x_j/s2_in/truck_fresh.json

@@ -1,0 +1,17 @@
+P3 static map voxels 16542
+P3 pedestrian boxes 154134 down-weighted 49769 (0.323)
+v29 val_i1 vehicle: 0.8237 vs 0.8237 | equal: True
+v29 val_i1 pedestrian: 0.3416 vs 0.3416 | equal: True
+v29 val_i1 truck: 0.7804 vs 0.7804 | equal: True
+P3 pedestrian boxes 344945 down-weighted 107241 (0.311)
+v29 fresh vehicle: 0.7138 vs 0.7138 | equal: True
+v29 fresh pedestrian: 0.3321 vs 0.3321 | equal: True
+v29 fresh truck: 0.8472 vs 0.8472 | equal: True
+P3 pedestrian boxes 46485 down-weighted 15690 (0.338)
+test v25 chain + P3 rebuilt vs v2x_v27 pedestrian: box for box equal: True
+P3 pedestrian boxes 52008 down-weighted 17403 (0.335)
+test v29 vs v2x_v27 truck: box for box equal: True
+test v29 vs FSHNet R0 build vehicle: box for box equal: True
+test v29 vs FSHNet R6 + P3 build pedestrian: box for box equal: True
+boxes v29 {'vehicle': 83237, 'pedestrian': 52008, 'truck': 12818} 148063 | v27 {'vehicle': 69823, 'pedestrian': 46485, 'truck': 12818} 129126
+wrote v2x_v29_test.json

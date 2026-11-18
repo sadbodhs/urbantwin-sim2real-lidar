@@ -1,0 +1,332 @@
+{
+ "experiment": "Q7 V2X vehicle joint lanes: v2x_v31's vehicle lane (fsh_saf_v2x) + dsvt_v2x + vmamba_v2x + pv_v2x_n, each at weight 1",
+ "lanes": "q7_dsvt_vmamba_pvn_v2x_j",
+ "members": [
+  "dsvt_v2x",
+  "vmamba_v2x",
+  "pv_v2x_n"
+ ],
+ "mode": "full",
+ "workers": 6,
+ "splits": [
+  "test",
+  "val_i1",
+  "fresh"
+ ],
+ "script_md5": "6f3a8face8b0f0a75642f0bde16433c2",
+ "member_pred_md5": {
+  "output/v2x/dsvt_v2x/kit/pred_val50k.json": "9473e3902af59b05a14d8155285a86c8",
+  "output/v2x/dsvt_v2x/kit/pred_test.json": "61116c40909029d3de2b11d6c8c67101",
+  "output/v2x/dsvt_v2x/kit/pred_fresh50k.json": "a049ca040cfff198bd8b24768cb7bd0d",
+  "output/v2x/vmamba_v2x/kit/pred_val50k.json": "870e00afeb2ea43c2a552507f327c313",
+  "output/v2x/vmamba_v2x/kit/pred_test.json": "89a5cfe86842123da632a27c45ab0046",
+  "output/v2x/vmamba_v2x/kit/pred_fresh50k.json": "3c79ac7aebebb6e76afe326639600d91",
+  "output/v2x/pv_v2x_n/kit/pred_val50k.json": "a3cd93a2f8538addc3365ff3690fa141",
+  "output/v2x/pv_v2x_n/kit/pred_test.json": "8cda9537f8aed4f4b17bd6c85d60d115",
+  "output/v2x/pv_v2x_n/kit/pred_fresh50k.json": "7b981253b4cf6fae5bb9f6cc98060feb"
+ },
+ "one_lane_md5": {
+  "dsvt_v2x": {
+   "output/v2x/dsvt_v2x_j/s2_in/vehicle_test.json": "0a2a248bd87af921f3fdfcd741ee19dd",
+   "output/v2x/dsvt_v2x_j/s2_in/pedestrian_test.json": "391a0e518bec383ebd5db18603762273",
+   "output/v2x/dsvt_v2x_j/s2_in/truck_test.json": "367f213ebd3f7a7755ade8bbe8c37134",
+   "output/v2x/dsvt_v2x_j/s2_in/vehicle_val_i1.json": "18ebaa993075c0114e55a9e643bbc826",
+   "output/v2x/dsvt_v2x_j/s2_in/pedestrian_val_i1.json": "1a8ab4abc67d0d4b97d07ebccd94ee57",
+   "output/v2x/dsvt_v2x_j/s2_in/truck_val_i1.json": "51ccf930df9cce5a61074bbfad44c846",
+   "output/v2x/dsvt_v2x_j/s2_in/vehicle_fresh.json": "226af5025afd720d69f588e05d92bbe4",
+   "output/v2x/dsvt_v2x_j/s2_in/pedestrian_fresh.json": "c5ae83e9bc875b76e6ef1e694d3a117d",
+   "output/v2x/dsvt_v2x_j/s2_in/truck_fresh.json": "3b9894c6590cbc553ccf30d3b4702653"
+  },
+  "vmamba_v2x": {
+   "output/v2x/vmamba_v2x_j/s2_in/vehicle_test.json": "7af187cdf3df87efe7da2f08c0ee7c6f",
+   "output/v2x/vmamba_v2x_j/s2_in/pedestrian_test.json": "6d28d80b02f9ec3563435a8133cf014c",
+   "output/v2x/vmamba_v2x_j/s2_in/truck_test.json": "8b10f8b9e26f6c4cadfdf32696eae71d",
+   "output/v2x/vmamba_v2x_j/s2_in/vehicle_val_i1.json": "953e200481be5472edc7920e2eabfeb8",
+   "output/v2x/vmamba_v2x_j/s2_in/pedestrian_val_i1.json": "4cefed71a33aececc40b8144463f3efd",
+   "output/v2x/vmamba_v2x_j/s2_in/truck_val_i1.json": "b7363fb34d6b06e8c9e3ce2ad7dba05e",
+   "output/v2x/vmamba_v2x_j/s2_in/vehicle_fresh.json": "487353131ed7f24e987e6c0639d23b89",
+   "output/v2x/vmamba_v2x_j/s2_in/pedestrian_fresh.json": "6f9baf3106fb10a775b7d7e09d4203af",
+   "output/v2x/vmamba_v2x_j/s2_in/truck_fresh.json": "1fa3902fdec686c5cc76c2d72edc9395"
+  },
+  "pv_v2x_n": {
+   "output/v2x/pv_v2x_n_j/s2_in/vehicle_test.json": "ff9c056d3d7a11a2c6c6bb386ebc97b7",
+   "output/v2x/pv_v2x_n_j/s2_in/pedestrian_test.json": "af6ac85c05fafe45fc944a0b533eb353",
+   "output/v2x/pv_v2x_n_j/s2_in/truck_test.json": "55a76f8c94875826b6a50bde5f7d129c",
+   "output/v2x/pv_v2x_n_j/s2_in/vehicle_val_i1.json": "4918003675af2cf29345a7126317727f",
+   "output/v2x/pv_v2x_n_j/s2_in/pedestrian_val_i1.json": "af6bba3a0acf72f7a6789f6768765c5e",
+   "output/v2x/pv_v2x_n_j/s2_in/truck_val_i1.json": "c78bb227a3ab73be6338dbafbe900c93",
+   "output/v2x/pv_v2x_n_j/s2_in/vehicle_fresh.json": "7cae2b005cea0b485858d824db2f34ab",
+   "output/v2x/pv_v2x_n_j/s2_in/pedestrian_fresh.json": "3b1147a2f6783b2b37b2b242d4472764",
+   "output/v2x/pv_v2x_n_j/s2_in/truck_fresh.json": "7a75dcb143f86441e6f8dae3e54b4df4"
+  }
+ },
+ "kit_md5": {
+  "output/v2x/fshnet_v2x/kit/pred_val50k.json": "e7cd475b690b6317918e870c7aab452c",
+  "output/v2x/fshnet_v2x/kit/pred_test.json": "fa728ad136cf0e2897a28f8ee40c4574",
+  "output/v2x/fshnet_v2x/kit/pred_fresh50k.json": "3090ad3b32eee49b1cce8452caa532e8",
+  "output/v2x/safdnet_v2x/kit/pred_val50k.json": "4d28204379b20e0cf5f4adc73d1a919a",
+  "output/v2x/safdnet_v2x/kit/pred_test.json": "06d883937e45590f7c975b2e5b598d43",
+  "output/v2x/safdnet_v2x/kit/pred_fresh50k.json": "269e51c9eb539ae27da59449d14bcc31"
+ },
+ "v31_lane_md5": {
+  "output/v2x/fsh_saf_v2x/s2_in/vehicle_val_i1.json": "bc36abccdbfb978857bdc5e46919be01",
+  "output/v2x/fsh_saf_v2x/s2_in/vehicle_test.json": "c5ad44c6e3d022915f37d5340f222767",
+  "output/v2x/fsh_saf_v2x/s2_in/vehicle_fresh.json": "04d991191cf1dd622e823ddba70b8632",
+  "output/v2x/fshnet_v2x/s2_in/pedestrian_val_i1.json": "8d860619437d76e66fb4e9b220d5d112",
+  "output/v2x/fshnet_v2x/s2_in/pedestrian_test.json": "96320b41d208b68f89f7d2484afeba36",
+  "output/v2x/fshnet_v2x/s2_in/pedestrian_fresh.json": "b5358fe9c8c70280f82de04acb216db6",
+  "output/v2x/ens/v18_val_i1.json": "9035c7aa14068d58a834f8cd85ade6f3",
+  "output/v2x/ens/v18_test.json": "ddaba482383f258752d6b41e4e2bd6e9",
+  "output/v2x/ens/v18_fresh.json": "099b1a4b288b25534db0cb39f488b1c0"
+ },
+ "member_md5": {
+  "output/v2x/sweep_in/pp_test.json": "8d263643437794978b3d1c1271d1120f",
+  "output/v2x/sweep_in/cp_test.json": "10ba1d1b4400612171fc20d82056de36",
+  "output/v2x/sweep_in/ped_test.json": "eb56bcd9c0fceb9b9d11f253149f0fcb",
+  "output/v2x/sweep_in/ppall_test.json": "25645e7ae4b7b5544679eb50b79b0db2",
+  "output/v2x/pp_v2x_walk/kit_mc/pred_test.json": "2bf9a2e5607282d38932736725520ffb",
+  "output/v2x/vrcnn_v2x/kit/pred_test.json": "4187333862c28fdab0662daef1040c17",
+  "output/v2x/vrcnn_v2x_b/kit/pred_test.json": "2c0a6ad41304a21040e98042d0b811d5",
+  "output/v2x/sweep_in/pp_val50k.json": "8e142fe1b37a2684f887e6780f8c810e",
+  "output/v2x/sweep_in/cp_val50k.json": "22c0b6c1d868ca846a4e60be56623f7f",
+  "output/v2x/sweep_in/ped_val50k.json": "4b22668966e41c4f163bd1d873931357",
+  "output/v2x/sweep_in/ppall_val50k.json": "0c0205200564d35917dd09a652d75662",
+  "output/v2x/pp_v2x_walk/kit_mc/pred_val50k.json": "3923637a4e0b8f191720010ce26e971f",
+  "output/v2x/vrcnn_v2x/kit/pred_val50k.json": "6ab177e0d918c79d9862a1138caeba3a",
+  "output/v2x/vrcnn_v2x_b/kit/pred_val50k.json": "0d8427c6803264ba9fca79884916bdf6",
+  "output/v2x/pp_v2x/kit_mc/pred_fresh50k.json": "f6211fcf9a87d0432036190a0d4ccc23",
+  "output/v2x/cp_v2x/kit/pred_fresh50k.json": "f06ef1b410e07d4f19185391d1353549",
+  "output/v2x/pp_v2x_ped/kit_mc/pred_fresh50k.json": "610d92c4ecfbc92795fdb9c24ac71777",
+  "output/v2x/pp_v2x_all/kit_mc/pred_fresh50k.json": "3f4e17e69b9c2705b94dd279be173548",
+  "output/v2x/pp_v2x_walk/kit_mc/pred_fresh50k.json": "d562e0b355096780470042e39f166f55",
+  "output/v2x/vrcnn_v2x/kit/pred_fresh50k.json": "5958468e89f3338eee74656dc703bf97",
+  "output/v2x/vrcnn_v2x_b/kit/pred_fresh50k.json": "bbf5b8a97d7826ccb5513b9c8b1e7c26"
+ },
+ "lane_off": {
+  "vehicle": {
+   "test": {
+    "file": "output/v2x/fsh_saf_v2x/s2_in/vehicle_test.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 95434,
+    "confident": 387
+   },
+   "val_i1": {
+    "file": "output/v2x/fsh_saf_v2x/s2_in/vehicle_val_i1.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 276317,
+    "confident": 1106
+   },
+   "fresh": {
+    "file": "output/v2x/fsh_saf_v2x/s2_in/vehicle_fresh.json",
+    "box_for_box": true,
+    "bytes": true,
+    "boxes": 626691,
+    "confident": 2199
+   }
+  }
+ },
+ "new": {
+  "vehicle": {
+   "test": {
+    "md5": "6a6c9fe91fd87031dcf661223f95c469",
+    "boxes": 116299,
+    "confident": 399
+   },
+   "val_i1": {
+    "md5": "8453450d985e436037b6e10f188a1d5a",
+    "boxes": 335389,
+    "confident": 1123
+   },
+   "fresh": {
+    "md5": "3b971ab3c5327525adf7aafd9a786fd5",
+    "boxes": 762836,
+    "confident": 2284
+   }
+  }
+ },
+ "time": {
+  "test": {
+   "load_s": 1.1,
+   "chains_s": 659.0,
+   "chunks": 24,
+   "chunk_s_max": 242.4
+  },
+  "val_i1": {
+   "load_s": 7.3,
+   "chains_s": 1836.0,
+   "chunks": 24,
+   "chunk_s_max": 508.3
+  },
+  "fresh": {
+   "load_s": 7.1,
+   "chains_s": 4123.0,
+   "chunks": 24,
+   "chunk_s_max": 1110.3
+  },
+  "total_s": 6665.9
+ },
+ "split_members": {
+  "test": {
+   "base5": [
+    "output/v2x/sweep_in/pp_test.json",
+    "output/v2x/sweep_in/cp_test.json",
+    "output/v2x/sweep_in/ped_test.json",
+    "output/v2x/sweep_in/ppall_test.json",
+    "output/v2x/pp_v2x_walk/kit_mc/pred_test.json"
+   ],
+   "x6": [
+    "output/v2x/vrcnn_v2x/kit/pred_test.json"
+   ],
+   "x6b": [
+    "output/v2x/vrcnn_v2x_b/kit/pred_test.json"
+   ],
+   "fsh": [
+    "output/v2x/fshnet_v2x/kit/pred_test.json"
+   ],
+   "saf": [
+    "output/v2x/safdnet_v2x/kit/pred_test.json"
+   ],
+   "dsvt_v2x": [
+    "output/v2x/dsvt_v2x/kit/pred_test.json"
+   ],
+   "vmamba_v2x": [
+    "output/v2x/vmamba_v2x/kit/pred_test.json"
+   ],
+   "pv_v2x_n": [
+    "output/v2x/pv_v2x_n/kit/pred_test.json"
+   ]
+  },
+  "val_i1": {
+   "base5": [
+    "output/v2x/sweep_in/pp_val50k.json",
+    "output/v2x/sweep_in/cp_val50k.json",
+    "output/v2x/sweep_in/ped_val50k.json",
+    "output/v2x/sweep_in/ppall_val50k.json",
+    "output/v2x/pp_v2x_walk/kit_mc/pred_val50k.json"
+   ],
+   "x6": [
+    "output/v2x/vrcnn_v2x/kit/pred_val50k.json"
+   ],
+   "x6b": [
+    "output/v2x/vrcnn_v2x_b/kit/pred_val50k.json"
+   ],
+   "fsh": [
+    "output/v2x/fshnet_v2x/kit/pred_val50k.json"
+   ],
+   "saf": [
+    "output/v2x/safdnet_v2x/kit/pred_val50k.json"
+   ],
+   "dsvt_v2x": [
+    "output/v2x/dsvt_v2x/kit/pred_val50k.json"
+   ],
+   "vmamba_v2x": [
+    "output/v2x/vmamba_v2x/kit/pred_val50k.json"
+   ],
+   "pv_v2x_n": [
+    "output/v2x/pv_v2x_n/kit/pred_val50k.json"
+   ]
+  },
+  "fresh": {
+   "base5": [
+    "output/v2x/pp_v2x/kit_mc/pred_fresh50k.json",
+    "output/v2x/cp_v2x/kit/pred_fresh50k.json",
+    "output/v2x/pp_v2x_ped/kit_mc/pred_fresh50k.json",
+    "output/v2x/pp_v2x_all/kit_mc/pred_fresh50k.json",
+    "output/v2x/pp_v2x_walk/kit_mc/pred_fresh50k.json"
+   ],
+   "x6": [
+    "output/v2x/vrcnn_v2x/kit/pred_fresh50k.json"
+   ],
+   "x6b": [
+    "output/v2x/vrcnn_v2x_b/kit/pred_fresh50k.json"
+   ],
+   "fsh": [
+    "output/v2x/fshnet_v2x/kit/pred_fresh50k.json"
+   ],
+   "saf": [
+    "output/v2x/safdnet_v2x/kit/pred_fresh50k.json"
+   ],
+   "dsvt_v2x": [
+    "output/v2x/dsvt_v2x/kit/pred_fresh50k.json"
+   ],
+   "vmamba_v2x": [
+    "output/v2x/vmamba_v2x/kit/pred_fresh50k.json"
+   ],
+   "pv_v2x_n": [
+    "output/v2x/pv_v2x_n/kit/pred_fresh50k.json"
+   ]
+  }
+ },
+ "one_member": {
+  "vehicle": {
+   "dsvt_v2x": {
+    "test": {
+     "file": "output/v2x/dsvt_v2x_j/s2_in/vehicle_test.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    },
+    "val_i1": {
+     "file": "output/v2x/dsvt_v2x_j/s2_in/vehicle_val_i1.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    },
+    "fresh": {
+     "file": "output/v2x/dsvt_v2x_j/s2_in/vehicle_fresh.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    }
+   },
+   "vmamba_v2x": {
+    "test": {
+     "file": "output/v2x/vmamba_v2x_j/s2_in/vehicle_test.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    },
+    "val_i1": {
+     "file": "output/v2x/vmamba_v2x_j/s2_in/vehicle_val_i1.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    },
+    "fresh": {
+     "file": "output/v2x/vmamba_v2x_j/s2_in/vehicle_fresh.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    }
+   },
+   "pv_v2x_n": {
+    "test": {
+     "file": "output/v2x/pv_v2x_n_j/s2_in/vehicle_test.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    },
+    "val_i1": {
+     "file": "output/v2x/pv_v2x_n_j/s2_in/vehicle_val_i1.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    },
+    "fresh": {
+     "file": "output/v2x/pv_v2x_n_j/s2_in/vehicle_fresh.json",
+     "box_for_box": true,
+     "bytes": true,
+     "file_md5_on_record": true
+    }
+   }
+  }
+ },
+ "lane_off_passed": true,
+ "one_member_passed": true,
+ "maxrss_mb": {
+  "main": 4780,
+  "largest_worker": 3227
+ }
+}

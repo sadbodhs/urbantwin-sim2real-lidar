@@ -1,0 +1,4 @@
+# urbantwin-lidar:scatter = urbantwin-lidar:latest + torch_scatter and einops only (einops: imported by FSHNet SlotFormer code), for the FSHNet jobs; SAFDNet needs it too.
+# Used only by the FSHNet and SAFDNet jobs (UT_IMAGE=urbantwin-lidar:scatter); every other job keeps urbantwin-lidar:latest.
+FROM urbantwin-lidar:latest
+RUN pip install "torch-scatter==2.1.2" -f https://data.pyg.org/whl/torch-2.4.0+cu121.html && pip install "einops==0.8.0"

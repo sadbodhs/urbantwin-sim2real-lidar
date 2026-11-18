@@ -1,0 +1,53 @@
+{
+ "map_voxels": {
+  "early": 58091,
+  "full": 57023
+ },
+ "late_frames": {
+  "val": 160,
+  "fresh": 80
+ },
+ "Person": {
+  "val": {
+   "a": 0.3812,
+   "b_early": 0.4274,
+   "c_full": 0.3934,
+   "gain_b": 0.0462,
+   "gain_c": 0.0122,
+   "share_down_early": 0.5755291977864634,
+   "share_down_full": 0.5792345497465269
+  },
+  "fresh": {
+   "a": 0.3561,
+   "b_early": 0.4039,
+   "c_full": 0.3696,
+   "gain_b": 0.0478,
+   "gain_c": 0.0135,
+   "share_down_early": 0.5768289156626506,
+   "share_down_full": 0.5812240963855422
+  },
+  "pass": true
+ },
+ "Bicycle": {
+  "val": {
+   "a": 0.4742,
+   "b_early": 0.4903,
+   "c_full": 0.4939,
+   "gain_b": 0.0161,
+   "gain_c": 0.0197,
+   "share_down_early": 0.14879229246843084,
+   "share_down_full": 0.14562875339153336
+  },
+  "fresh": {
+   "a": 0.4715,
+   "b_early": 0.4869,
+   "c_full": 0.491,
+   "gain_b": 0.0154,
+   "gain_c": 0.0195,
+   "share_down_early": 0.1489881657251039,
+   "share_down_full": 0.14627284452523362
+  },
+  "pass": true
+ },
+ "combined_equal": true
+}

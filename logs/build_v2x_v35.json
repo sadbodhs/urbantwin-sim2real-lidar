@@ -1,0 +1,147 @@
+{
+ "name": "v2x_v35",
+ "base": {
+  "file": "output/v2x/ens/v2x_v34_test.json",
+  "md5": "55a2071985af722bf8154e7a10b2809c"
+ },
+ "change": "pedestrian: dsvt_v2x_j second stages (R6, P3) + P-Z 0.03 m",
+ "outside_gate": "dsvt_v2x_j pedestrian failed its reading (val_i1 h2, AP@0.7); shipped by the author's choice (slot 8)",
+ "rows": {
+  "val_i1": {
+   "new": {
+    "all": [
+     0.3598,
+     0.0062
+    ],
+    "h1": [
+     0.3383,
+     0.0042
+    ],
+    "h2": [
+     0.3865,
+     0.0068
+    ]
+   },
+   "v34": {
+    "all": [
+     0.354,
+     0.0055
+    ],
+    "h1": [
+     0.3326,
+     0.0038
+    ],
+    "h2": [
+     0.3809,
+     0.0064
+    ]
+   },
+   "fails": []
+  },
+  "fresh": {
+   "new": {
+    "all": [
+     0.3517,
+     0.0042
+    ],
+    "h1": [
+     0.367,
+     0.0032
+    ],
+    "h2": [
+     0.3431,
+     0.0048
+    ]
+   },
+   "v34": {
+    "all": [
+     0.3471,
+     0.0041
+    ],
+    "h1": [
+     0.3619,
+     0.0033
+    ],
+    "h2": [
+     0.3383,
+     0.0046
+    ]
+   },
+   "fails": []
+  }
+ },
+ "classes": {
+  "vehicle": {
+   "v34": 116299,
+   "v35": 116299,
+   "v34_ge03": 393,
+   "v35_ge03": 393,
+   "equal": true
+  },
+  "pedestrian": {
+   "v34": 52008,
+   "v35": 62695,
+   "v34_ge03": 1734,
+   "v35_ge03": 1736,
+   "equal": false
+  },
+  "truck": {
+   "v34": 12818,
+   "v35": 12818,
+   "v34_ge03": 248,
+   "v35_ge03": 248,
+   "equal": true
+  }
+ },
+ "boxes": 191812,
+ "out": {
+  "file": "output/v2x/ens/v2x_v35_test.json",
+  "md5": "be6122b96cf619280f260c1e34244d24"
+ },
+ "checks": [
+  [
+   "output/v2x/ens/v2x_v34_test.json md5 55a2071985af722bf8154e7a10b2809c = 55a2071985af722bf8154e7a10b2809c",
+   true
+  ],
+  [
+   "P3 static map voxels 16542 = 16542",
+   true
+  ],
+  [
+   "val_i1: unshifted dsvt_j pedestrian rows = dsvt_v2x_j_read.json's new rows",
+   true
+  ],
+  [
+   "val_i1: v34's pedestrian (v31 chain + P-Z) rows = v2x_pz_read.json's new rows",
+   true
+  ],
+  [
+   "fresh: unshifted dsvt_j pedestrian rows = dsvt_v2x_j_read.json's new rows",
+   true
+  ],
+  [
+   "fresh: v34's pedestrian (v31 chain + P-Z) rows = v2x_pz_read.json's new rows",
+   true
+  ],
+  [
+   "test: v34's pedestrian rebuilt (v31 chain + P-Z) equals v2x_v34's box for box",
+   true
+  ],
+  [
+   "test frames equal",
+   true
+  ],
+  [
+   "vehicle equals v34 box for box",
+   true
+  ],
+  [
+   "truck equals v34 box for box",
+   true
+  ],
+  [
+   "pedestrian changed",
+   true
+  ]
+ ]
+}

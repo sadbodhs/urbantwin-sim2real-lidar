@@ -1,0 +1,164 @@
+{
+ "name": "lumpi_v62",
+ "base": {
+  "file": "output/lumpi/ens_x/lumpi_v59_test.json",
+  "md5": "057209a5c39bcea2436ab69ff5783b90"
+ },
+ "change": "Person: add spec_lumpi_person_rs",
+ "reading": {
+  "near": [
+   "logs/igm60_spec_lumpi_person_rs_near.json",
+   "accc9df3a6a38959fecb8e6d7cbdc1bb"
+  ],
+  "val": [
+   "logs/igm60_spec_lumpi_person_rs_val.json",
+   "542e7aad4bdb6c17f3fb03279d2f7b3c"
+  ]
+ },
+ "test_s2": [
+  "output/lumpi/spec_lumpi_person_rs/s2/v29_test_min01.json",
+  "978ed7e2aabe2811d1652e274956a95b"
+ ],
+ "val": {
+  "Person": 0.4841379233799417,
+  "Person_base": 0.4799871116506246
+ },
+ "copies_test": 682,
+ "classes": {
+  "Person": {
+   "v59": 33002,
+   "v62": 33002,
+   "v59_ge03": 469,
+   "v62_ge03": 434,
+   "equal": false
+  },
+  "Car": {
+   "v59": 73816,
+   "v62": 73816,
+   "v59_ge03": 1386,
+   "v62_ge03": 1386,
+   "equal": true
+  },
+  "Bicycle": {
+   "v59": 87774,
+   "v62": 87774,
+   "v59_ge03": 474,
+   "v62_ge03": 474,
+   "equal": true
+  },
+  "Motorcycle": {
+   "v59": 51217,
+   "v62": 51217,
+   "v59_ge03": 208,
+   "v62_ge03": 208,
+   "equal": true
+  },
+  "Bus": {
+   "v59": 19342,
+   "v62": 19342,
+   "v59_ge03": 14,
+   "v62_ge03": 14,
+   "equal": true
+  },
+  "Truck": {
+   "v59": 63651,
+   "v62": 63651,
+   "v59_ge03": 105,
+   "v62_ge03": 105,
+   "equal": true
+  },
+  "Van": {
+   "v59": 27304,
+   "v62": 27304,
+   "v59_ge03": 87,
+   "v62_ge03": 87,
+   "equal": true
+  },
+  "Unknown": {
+   "v59": 34169,
+   "v62": 34169,
+   "v59_ge03": 219,
+   "v62_ge03": 219,
+   "equal": true
+  }
+ },
+ "boxes": 390275,
+ "out": {
+  "file": "output/lumpi/ens_x/lumpi_v62_test.json",
+  "md5": "446102cea120e86bc49adcf5cdabc02c"
+ },
+ "checks": [
+  [
+   "output/lumpi/ens_x/lumpi_v59_test.json md5 057209a5c39bcea2436ab69ff5783b90 = logs/build_lumpi_v61.json base 057209a5c39bcea2436ab69ff5783b90 (prefix 057209a5)",
+   true
+  ],
+  [
+   "v59 test file has the 50 test frames",
+   true
+  ],
+  [
+   "output/lumpi/ens_x/lumpi_v59_test.json equals submissions/lumpi_v59/submission.zip's predictions.json frame by frame (canonical)",
+   true
+  ],
+  [
+   "logs/igm60_spec_lumpi_person_rs_near.json holds 'Person: add spec_lumpi_person_rs', read with base_v59 on all six switches at v59",
+   true
+  ],
+  [
+   "logs/igm60_spec_lumpi_person_rs_val.json holds 'Person: add spec_lumpi_person_rs', read with base_v59 on all six switches at v59",
+   true
+  ],
+  [
+   "logs/igm60_spec_lumpi_person_rs_val.json 'Person: add spec_lumpi_person_rs' is the failed reading shipped by choice (passed False: val +0.00415 < +0.005; inside +0.0143; veto [])",
+   true
+  ],
+  [
+   "output/lumpi/spec_lumpi_person_rs/s2/v29_test_min01.json md5 978ed7e2aabe2811d1652e274956a95b = the chain's placed md5 ['978ed7e2aabe2811d1652e274956a95b']",
+   true
+  ],
+  [
+   "val Person AP@0.5 0.484138 / base 0.479987 = the reading's 0.484138 / 0.479987 (1e-9)",
+   true
+  ],
+  [
+   "test: Person chain 'v59' + v59's copies equals lumpi_v59's Person box for box",
+   true
+  ],
+  [
+   "test: the two-wheeler copies are unchanged (682 boxes)",
+   true
+  ],
+  [
+   "Car equals v59 box for box",
+   true
+  ],
+  [
+   "Bicycle equals v59 box for box",
+   true
+  ],
+  [
+   "Motorcycle equals v59 box for box",
+   true
+  ],
+  [
+   "Bus equals v59 box for box",
+   true
+  ],
+  [
+   "Truck equals v59 box for box",
+   true
+  ],
+  [
+   "Van equals v59 box for box",
+   true
+  ],
+  [
+   "Unknown equals v59 box for box",
+   true
+  ],
+  [
+   "Person changed",
+   true
+  ]
+ ]
+}

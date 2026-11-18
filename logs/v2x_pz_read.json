@@ -1,0 +1,75 @@
+{
+ "baseline": "v2x_v32",
+ "baseline_md5": "adc281c6c553c2409f0ef2dedc449db0",
+ "dz": 0.03,
+ "experiment": "P-Z: v32's pedestrian chain (build_v2x_v29.ped: R6 + P3) with z + 0.03 on every pedestrian box",
+ "gate": "standard V2X gate (val_i1 +0.003 all / h1 / h2, AP@0.7 not down; fresh +0.003 all / h2, AP@0.7 not down), pedestrian, vs v2x_v32",
+ "pedestrian": {
+  "new": {
+   "val_i1": {
+    "all": [
+     0.354,
+     0.0055
+    ],
+    "h1": [
+     0.3326,
+     0.0038
+    ],
+    "h2": [
+     0.3809,
+     0.0064
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.3471,
+     0.0041
+    ],
+    "h1": [
+     0.3619,
+     0.0033
+    ],
+    "h2": [
+     0.3383,
+     0.0046
+    ]
+   }
+  },
+  "ref": {
+   "val_i1": {
+    "all": [
+     0.3416,
+     0.0042
+    ],
+    "h1": [
+     0.3254,
+     0.002
+    ],
+    "h2": [
+     0.3644,
+     0.0065
+    ]
+   },
+   "fresh": {
+    "all": [
+     0.3321,
+     0.0035
+    ],
+    "h1": [
+     0.3539,
+     0.0023
+    ],
+    "h2": [
+     0.3201,
+     0.0046
+    ]
+   }
+  },
+  "val_gate": true,
+  "fresh_gate": true,
+  "passed": true
+ },
+ "passed_classes": [
+  "pedestrian"
+ ]
+}

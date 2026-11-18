@@ -1,0 +1,9 @@
+https://github.com/zhanggang001/HEDNet commit 8694e7f07e860416bd99dbf46f952b3e6b6c0c6f
+files (import lines rewritten to this package, code unchanged):
+pcdet/models/backbones_3d/hednet.py
+pcdet/models/dense_heads/sparse_center_head.py
+pcdet/models/model_utils/hednet_utils.py
+pcdet/models/model_utils/centernet_utils.py
+pcdet/models/model_utils/model_nms_utils.py
+pcdet/utils/loss_utils.py
+pcdet/utils/box_utils.py

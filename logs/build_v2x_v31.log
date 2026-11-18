@@ -1,0 +1,23 @@
+v2x_v31: vehicle vg, pedestrian v30, truck v30 | expected (val_i1, fresh) {'vehicle': (0.8446, 0.7532), 'pedestrian': (0.3416, 0.3321), 'truck': (0.7804, 0.8472)}
+P3 static map voxels 16542
+val_i1: scores equal v30: True
+P3 pedestrian boxes 154134 down-weighted 49769 (0.323)
+v2x_v31 val_i1 vehicle (vg): 0.8446 vs 0.8446 | equal: True
+v2x_v31 val_i1 pedestrian (v30): 0.3416 vs 0.3416 | equal: True
+v2x_v31 val_i1 truck (v30): 0.7804 vs 0.7804 | equal: True
+fresh: scores equal v30: True
+P3 pedestrian boxes 344945 down-weighted 107241 (0.311)
+v2x_v31 fresh vehicle (vg): 0.7532 vs 0.7532 | equal: True
+v2x_v31 fresh pedestrian (v30): 0.3321 vs 0.3321 | equal: True
+v2x_v31 fresh truck (v30): 0.8472 vs 0.8472 | equal: True
+test: scores equal v30: True
+P3 pedestrian boxes 52008 down-weighted 17403 (0.335)
+test pedestrian rebuilt from v30's sources vs v2x_v30 pedestrian: box for box equal: True
+test v2x_v31 vehicle vs output/v2x/ens/vgeom_vehicle_test.json (the V-G reading's test file) vehicle: box for box equal: True
+test v2x_v31 vs vg build vehicle: box for box equal: True
+test v2x_v31 vs v2x_v30 pedestrian: box for box equal: True
+test v2x_v31 vs v2x_v30 truck: box for box equal: True
+boxes v2x_v31 {'vehicle': 95434, 'pedestrian': 52008, 'truck': 12818} 160260 | v30 {'vehicle': 95434, 'pedestrian': 52008, 'truck': 12818} 160260
+confident vehicle (score >= 0.3) v30 381 -> v2x_v31 381
+NOTE output/v2x/ens/v2x_v31_test.json now exists: scripts/r6r7_read_v2x.py fs2 rerun would take v31 as its baseline
+wrote output/v2x/ens/v2x_v31_test.json
