@@ -101,7 +101,7 @@ def main():
     text = json.dumps(out)
     OUT.write_text(text)
     res = {"name": "v2x_v35", "base": {"file": str(V34), "md5": V34_MD5}, "change": "pedestrian: dsvt_v2x_j second stages (R6, P3) + P-Z 0.03 m",
-           "outside_gate": "dsvt_v2x_j pedestrian failed its reading (val_i1 h2, AP@0.7); shipped by the author's choice (slot 8)",
+           "outside_gate": "dsvt_v2x_j pedestrian failed its reading (val_i1 h2, AP@0.7); shipped by our own choice (slot 8)",
            "rows": rows, "classes": table, "boxes": sum(len(v) for v in out.values()), "out": {"file": str(OUT), "md5": hashlib.md5(text.encode()).hexdigest()},
            "checks": CHECKS}
     LOGJ.write_text(json.dumps(res, indent=1))
