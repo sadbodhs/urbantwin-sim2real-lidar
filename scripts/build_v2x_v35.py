@@ -1,7 +1,7 @@
 """v2x_v35 (slot 8, a short CPU-only change): v2x_v34 with the pedestrian
 class from the DSVT-Pillar joint lane's cached second stages (output/v2x/dsvt_v2x_j/s2/pedestrian_{x6b,neg}_<s>_ref.json, R6, P3), then P-Z
 (z + 0.03 m). The DSVT-Pillar pedestrian reading (logs/dsvt_v2x_j_read.json, vs v2x_v31) FAILED the gate (val_i1 h2 +0.0011, AP@0.7 -0.0001), so this
-class is outside the gate as written, an author's choice made after that reading; the report must list it. Vehicle and truck stay v34's box for box
+class is outside the gate as written, our own choice made after that reading; the report must list it. Vehicle and truck stay v34's box for box
 (no truck option is built here). CPU only; nothing is tuned here.
 Checks (STOP on any miss; nothing written):
   1. v2x_v34_test.json md5 = 55a20719 (= predictions.json of the uploaded v2x_v34d zip); P3 static map has 16,542 voxels.

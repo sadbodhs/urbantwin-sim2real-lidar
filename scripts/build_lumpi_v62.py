@@ -1,7 +1,7 @@
 """lumpi_v62 (slot 8; a short CPU-only change) = lumpi_v59 (the
 board-ranked package) with one class changed: "Person: add spec_lumpi_person_rs" (L12-Person; reading logs/igm60_spec_lumpi_person_rs_{near,val}.json,
 read with --base-v59 on lumpi_v59's switch set). That reading FAILED the val bar (+0.00415 < +0.005; inside +0.0143 on 64 ids, before +0.0344,
-no veto), so this class is outside the gate as written: an author's choice made after the reading and after lumpi_v61's test result; the
+no veto), so this class is outside the gate as written: our own choice made after the reading and after lumpi_v61's test result; the
 report must list it. (Earlier draft: v61 base with a pass check; never run.)
 The Person chain is the reading's: G3.person on G3.P_REF + this model's Person second stage (min 0.01 on the v29 lane) as a sixth member
 (REFINER form; build_lumpi_v6x.person_files), P3, plus v59's two-wheeler copies (W.copies of v59's Bicycle + Motorcycle), exactly as
